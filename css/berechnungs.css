@@ -1,16 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Buttons anpassen */
+}
+
+/* Button Pink Speichern*/
 .activity-container {
-    width: 30%;
-    height: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    width: 60%;
+    padding: 10px;
     background: #EEB4FF;
     border-radius: 8px;
     border: 1px white solid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    display: inline-flex;
 }
 
 .activity-title {
@@ -23,19 +35,17 @@
     word-wrap: break-word;
 }
 
+/* Button weiss nicht speichern*/
 .custom-container {
-    width: 30%;
-    height: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    width: 60%;
+    padding: 10px;
     background: white;
     border-radius: 8px;
     border: 1px #EEB4FF solid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    display: inline-flex;
 }
 
 .custom-content {
@@ -46,4 +56,9 @@
     font-weight: 700;
     line-height: 24px;
     word-wrap: break-word;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
 }
