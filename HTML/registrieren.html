@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <!-- CSS-Datei einbinden -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header mit Zurück-Button und Logo -->
+    <header>
+        <img src="links/arrowback.png" />
+        <img src="links/logo.svg" alt="Logo" />
+    </header>
+    
+    <!-- Registrierungsformular -->
+    <main>
+        <h1>Registrierung</h1>
+        <div class="container">
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" name="vorname" required>
+        </div>
+        
+        <div class="container">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="container">
+            <label for="passwort">Passwort</label>
+            <input type="password" id="passwort" name="passwort" required>
+        </div>
+        
+        <div class="container">
+            <label for="geburtsdatum">Geburtsdatum</label>
+            <input type="date" id="geburtsdatum" name="geburtsdatum" required>
+        </div>
+        
+        <div class="container">
+            <label for="grundpraemie">Grundprämie</label>
+            <input type="text" id="grundpraemie" name="grundpraemie" required>
+        </div>
+        
+        <div class="container">
+            <label for="ahv-nummer">AHV-Nummer</label>
+            <input type="text" id="ahv-nummer" name="ahv-nummer" required>
+        </div>
+        
+        <div class="container">
+            <button type="submit">Registrieren</button>
+        </div>
+    </main>
+</body>
+</html>
