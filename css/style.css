@@ -1,100 +1,41 @@
-
-/* Prämien */
-.prämien {
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    height: 100vh; /* 100% Bildschirmhöhe */
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 20%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end; /* Logo rechts ausrichten */
+    align-items: center; /* Zentrierung vertikal */
+    padding: 10px;
+  }
+  
+  #logo {
+    width: 300px;
+    height: auto;
+  }
+  
+  
+  .container {
+    text-align: center; /* Zentriert den Text innerhalb des Containers */
+  }
+  
+  .login-text {
     color: black;
     font-size: 84px;
-    font-family: "Bodoni Moda", serif;
+    font-family: Bodoni Moda;
     font-weight: 700;
     line-height: 24px;
     word-wrap: break-word;
   }
-  
-  /* Lorem ipsum */
-  .lorem-ipsum {
-    color: black;
-    font-size: 20px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 400;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Login */
-  .login {
-    color: black;
-    font-size: 84px;
-    font-family: "Bodoni Moda", serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Username */
-  .username {
-    color: #666666;
-    font-size: 20px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Enter username */
-  .enter-username {
-    color: #AAAAAA;
-    font-size: 20px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Passwort */
-  .passwort {
-    color: #666666;
-    font-size: 20px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Enter Passwort */
-  .enter-passwort {
-    color: #AAAAAA;
-    font-size: 20px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Login (changed color) */
-  .login-button {
-    color: white;
-    font-size: 24px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-  
-  /* Registrieren (changed color) */
-  .registrieren-button {
-    color: #EEB4FF;
-    font-size: 24px;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-  }
-
-
-
-
-
-
-
-
-
   
