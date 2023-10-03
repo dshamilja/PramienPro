@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    height: 100vh; /* 100% Bildschirmhöhe */
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 20%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end; /* Logo rechts ausrichten */
+    align-items: center; /* Zentrierung vertikal */
+    padding: 10px;
+  }
+  
+  #logo {
+    width: 300px;
+    height: auto;
+  }
+  
+  
+  .container {
+    text-align: center; /* Zentriert den Text innerhalb des Containers */
+  }
+  
+  .login-text {
+    color: black;
+    font-size: 84px;
+    font-family: Bodoni Moda;
+    font-weight: 700;
+    line-height: 24px;
+    word-wrap: break-word;
+  }
+  
