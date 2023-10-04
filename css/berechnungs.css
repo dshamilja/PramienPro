@@ -1,10 +1,20 @@
+html {
+    height: 100%;
+    background-image: 
+        url('Bilder/background_startseite_oben_rechts_1.png'),
+        url('Bilder/background_startseite_unten_links_1.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+}
+
 body {
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100%;
 }
 
 .button-container {
