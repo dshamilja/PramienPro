@@ -1,9 +1,13 @@
 
-CREATE TABLE person (
-    username VARCHAR(255) NOT NULL,
-    first_name VARCHAR(255) NOT NULL,
-    last_name VARCHAR(255) NOT NULL,
+CREATE TABLE Users (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    EmailAddress VARCHAR(255) NOT NULL,
+    firtst_name VARCHAR(255),
+    last_name VARCHAR(255),
+    Birthdate DATE,
     grund_pramie DECIMAL(10, 2),
-    password VARCHAR(255) NOT NULL,
-    ahv_number VARCHAR(20) UNIQUE
+    ahv_number VARCHAR(16) NOT NULL
 );
+
+/* ganze table.sql kann gelöscht werden - war nur ein beispiel 
+wie man durch js eine neue Tabelle auf supabase anlegen kann (also hinzufügen)*/

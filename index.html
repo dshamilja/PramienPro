@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ich weiss nicht ob diese Zeile relevant ist (aus Bsp. kopiert) - Belinda -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Prämien Pro</title>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script> <!-- 1zu1 aus Bsp. kopiert - braucht es hier eine andere verlinkung?-->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script> <!-- 1zu1 aus Bsp. kopiert -->
 </head>
+
 <body>
     <header>
         <div class="arrow">
@@ -16,6 +21,38 @@
          </div>
     </header>
 
+    <h2 style="color:red" id="rootCheck">Checking location...</h2>
+
+    <div>
+        <h2>Magic Link Authentication</h2>
+        <input type="email" id="emailInput" placeholder="Enter your email" />
+        <button id="sendMagicLinkButton">Send Magic Link</button>
+    </div>
+
+    <p id="userStatus">Checking authentication status...</p>
+
+    <button id="logoutButton">Logout</button>
+
+    <script type="module" src="../../00_setup/supabase.js"></script> <!-- was muss verlinkt werden? -->
+    <script type="module" src="1_magiclink.js"></script> <!-- was muss verlinkt werden? -->
+
+    <script>
+
+        // script prüft, ob wir uns auf der root des servers befinden
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const rootCheckElem = document.getElementById('rootCheck');
+    
+            if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+                rootCheckElem.textContent = "You are on the root of the server.";
+                rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
+            } else {
+                rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="/"> da </a>';
+            }
+        });
+    </script>
+
+    <!-- Code wie Dshami die Loginseite Programiert hat:
     <div class="container">
         <h1 class="title">Login</h1>
         <div class="text_weit">E-Mailadresse</div>
@@ -31,5 +68,6 @@
             <div class="calculate-content center">Registrieren</div>
         </div>
     </div>
+    -->
 
 </body>
