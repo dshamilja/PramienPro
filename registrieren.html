@@ -1,68 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/registrieren.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registrieren.css">
+    <title>Prämien Pro</title>
 </head>
-
 <body>
-
-     <!-- Header mit Zurück-Button und Logo -->
     <header>
-        <img src="links/logo.svg" alt="Logo" id="logo">
-      </header>
-  
+        <div class="arrow">
+            <img src="/links/arrowback.png" alt="Pfeil">
+        </div>
+        <div class="logo">
+            <img src="/links/Logo.png" alt="Logo">
+         </div>
+    </header>
 
-    
-    <!-- Registrierungsformular -->
-    <main>
-        <div class="container">
-            <div class="registrieren-text">Registrieren</div>
-          </div>
-        <div class="container">
-            <label for="vorname">Vorname:</label>
-        </div>
-        <div class="container">
-            <input type="text" id="vorname" name="vorname" placeholder="Vorname eingeben" required>
+    <div class="container">
+        <h1 class="title">Registration</h1>
+        <div class= "kleiner_text" >Vorname</div>
+        <div class= "kleiner_text">Nachname</div>
+        <div class="button">
+            <input type="text" placeholder="Ihr Vorname" class="button-input">
         </div>
         
-        <div class="container">
-            <label for="name">Name:</label>
+        <div class="button">
+            <input type="text" placeholder="Ihr Nachname" class="button-input">
         </div>
-        <div class="container">
-            <input type="text" id="name" name="name" placeholder="Name eingeben" required>
+        <div class="text_weit">E-Mailadresse</div>
+
+        <div class="button_weit">
+            <input type="text" placeholder="Ihre E-Mail" class="button-input">
         </div>
-        
-        <div class="container">
-            <label for="passwort">Passwort:</label>
-        </div>
-        <div class="container">
-            <input type="password" id="passwort" name="passwort" placeholder="Passwort eingeben" required>
-        </div>
-        
-        <div class="container">
-            <label for="geburtsdatum">Geburtsdatum:</label>
-        </div>
-        <div class="container">
-            <input type="date" id="geburtsdatum" name="geburtsdatum" placeholder="Geburtsdatum eingeben" required>
+
+        <div class= "kleiner_text" >Geburtstag</div>
+        <div class= "kleiner_text">Grundprämie</div>
+        <div class="button">
+            <input type="text" placeholder="Datum" class="button-input">
         </div>
         
-        <div class="container">
-            <label for="grundpraemie">Grundprämie:</label>
+        <div class="button">
+            <input type="text" placeholder="CHF" class="button-input">
         </div>
-        <div class="container">
-            <input type="text" id="grundpraemie" name="grundpraemie" placeholder="Grundprämie eingeben" required>
+        <div class="text_weit">AHV-Nummer</div>
+        <div class="button_weit">
+            <input type="text" placeholder="Ihre AHV-Nummer" class="button-input">
         </div>
-        
-        <div class="container">
-            <label for="ahv-nummer">AHV-Nummer:</label>
+
+        <div class="calculate-container">
+            <div class="calculate-content center">Speichern</div>
         </div>
-        <div class="container">
-            <input type="text" id="ahv-nummer" name="ahv-nummer" placeholder="AHV-Nummer eingeben" required>
-        </div>
-        
-        <div class="container">
-            <button type="submit">Registrieren</button>
-        </div>
-    </main>
+    </div>
+
 </body>
-</html>

@@ -41,7 +41,6 @@ header {
     padding: 20px;
     background: white;
     border-radius: 8px;
-    border: 1px #AAAAAA solid;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -164,3 +163,6 @@ input[type="number"] {
     word-wrap: break-word;
 }
 
+.kleiner_text {
+    color: #666666
+  }
