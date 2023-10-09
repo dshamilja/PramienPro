@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    /*display: flex;
+    flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 0;
+    background: #F4F4F4; 
+}
+
+/*Header*/
+header {
+    top: 0; /* Position oben auf dem Bildschirm */
+    left: 0;
+    right: 0;
+    padding: 10px; /* Innenabstand des Headers */
+    height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
+    display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
+    justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
+    align-items: center; /* Um die Elemente vertikal zu zentrieren */
+}
+
+/*Header*/
+.logo img {
+    max-width: 200px; /* Maximale Breite des Logos */
+    height: auto; /* Damit das Logo proportional skaliert wird */
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+/*Header*/
+.arrow img {
+    margin-left: 80px;
+    max-width: 20px; /* Maximale Breite des Pfeils */
+    height: auto; /* Damit der Pfeil proportional skaliert wird */
+}
+/* CSS für das Grid-Layout */
+.container {
+    width: 500px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px #AAAAAA solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 0 auto; /* In die Mitte des Bildschirms zentrieren */
+    margin-top: 50px; /* Optional: Fügen Sie einen oberen Abstand hinzu */
+    grid-template-rows: 1fr auto;
+}
+
+/* Stil für die Titelzeile */
+.title {
+    font-size: 50px;
+    font-family: Comfortaa;
+    font-weight: 700;
+    line-height: 60px;
+    word-wrap: break-word;
+    text-align: center;
+    margin-bottom: 20px;
+    grid-column: span 2;
+}
+
+/* Stil für die Eingabefelder */
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #AAAAAA;
+    border-radius: 4px;
+    height: 100px;
+    font-size: 20px;
+    background-color: transparent;
+    font-family: "Comfortaa", sans-serif; /* Schriftart anpassen */
+    text-align: left; /* Text links ausrichten */
+    color: #000; /* Schriftfarbe anpassen, z.B. Schwarz (#000) */
+}
+
+
+/* Stil für die Buttons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2; /* Hier setzen wir die Spandauer auf 2, um beide Spalten abzudecken */
+}
+
+.button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #AAAAAA;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px #AAAAAA solid;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 40px !important;
+    font-family: Comfortaa;
+}
+
+.button-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: Comfortaa;
+    font-weight: 700;
+    background: transparent;
+    color: white;
+}
+
+.button-text {
+    color: white;
+    font-size: 20px;
+    font-family: Comfortaa;
+    font-weight: 700;
+    line-height: 24px;
+    word-wrap: break-word;
+    display: flex;
+}
+
+.calculate-container {
+    width: 200px;
+    padding: 10px;
+    background: #EEB4FF;
+    border-radius: 8px;
+    justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
+    align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
+    grid-column: span 2; /* Spannen Sie über beide Spalten */
+}
+
+.calculate-content {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: Comfortaa;
+    font-weight: 700;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.button_weit {
+    grid-column: span 2; /* Spannen Sie über beide Spalten */
+}
+
+.button_weit input[type="text"] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #AAAAAA;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px #AAAAAA solid;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 40px !important;
+    font-family: Comfortaa;
+}

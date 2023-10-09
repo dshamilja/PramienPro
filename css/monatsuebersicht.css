@@ -6,9 +6,6 @@ body {
     align-items: center;
     height: 100%;
     z-index: 0;
-    background-image: url('/Bilder/hintergrund.jpeg'); 
-    background-position: center; 
-    background-repeat: no-repeat;
 }
 
 /*Header*/
@@ -49,54 +46,6 @@ header {
     margin-top: 50px;
 }
 
-/* Button Pink Hintergründe */
-.button {
-    width: 100%;
-    padding: 10px;
-    background: #EEB4FF;
-    border-radius: 8px;
-    border: 1px white solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.button-text {
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    font-family: Comfortaa;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-}
-
-.button-text_weiss{
-    text-align: center;
-    color: #EEB4FF;
-    font-size: 24px;
-    font-family: Comfortaa;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-}
-.button:hover {
-    background: #AAAAAA;
-}
-
-.button_weiss {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px #EEB4FF solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
 p {
     text-align: center;
     font-size: 18px;
@@ -107,32 +56,6 @@ p {
     text-align: center;
     font-size: 36px;
     font-family: Bodoni Moda;
-}
-
-.berechnerfeld {
-    width: 100%;
-    height: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: #AAAAAA;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px #AAAAAA solid;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    display: inline-flex;
-}
-
-.berechnerschrift {
-    color: white;
-    font-size: 20px;
-    font-family: Comfortaa;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
 }
 
 .container-month {
@@ -148,7 +71,7 @@ p {
 
 .month-item {
     height: 50px;
-    background: #AAAAAA;
+    background: #666666;
     border-radius: 8px;
     border: 1px white solid;
     justify-content: flex-start;
