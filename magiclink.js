@@ -1,4 +1,3 @@
-// code von 1_magiclink.js 1zu1 kopiert - Belinda !!!
 import { supa } from "/supabase.js"
 
 // Funktion, um Magic Link zu senden
