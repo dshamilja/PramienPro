@@ -176,3 +176,44 @@ input[type="number"] {
   .kleiner_text {
     color: #666666
   }
+
+          /* CSS für Mobilgeräte */
+@media (max-width: 767px) {
+    /* Ändern Sie hier die Stile für Mobilgeräte */
+    /* Ändern Sie den grid-template-columns-Wert für die Mobileversion */
+    .container {
+        width: auto; /* Die Breite automatisch anpassen */
+        margin: 0 10px; /* Einen Rand hinzufügen, um den Inhalt zu zentrieren */
+        grid-template-columns: 1fr 1fr; /* Zwei Spalten für Mobilgeräte */
+    }
+    input[type="date"],
+    input[type="number"] {
+        height: 60px; /* Ändern Sie die Höhe der Eingabefelder für Mobilgeräte */
+    }
+    
+    .button {
+        height: 30px !important; /* Ändern Sie die Höhe der Buttons für Mobilgeräte */
+    }
+
+    .title {
+        font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
+      }
+
+       /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
+  .logo img {
+    max-width: 150px;
+    margin-right: 2px
+  }
+
+  .arrow img {
+    margin-left: 20px;
+    max-width: 15px;
+  }
+
+  .kleiner_text{
+    text-align: left; /* Links ausrichten */
+  }
+  }
+
+
+  

@@ -171,12 +171,12 @@ input[type="number"] {
         /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
     /* Ändern Sie hier die Stile für Mobilgeräte */
+    /* Ändern Sie den grid-template-columns-Wert für die Mobileversion */
     .container {
         width: auto; /* Die Breite automatisch anpassen */
         margin: 0 10px; /* Einen Rand hinzufügen, um den Inhalt zu zentrieren */
-        grid-template-columns: 1fr; /* Eine Spalte für Mobilgeräte */
+        grid-template-columns: 1fr 1fr; /* Zwei Spalten für Mobilgeräte */
     }
-    
     input[type="date"],
     input[type="number"] {
         height: 60px; /* Ändern Sie die Höhe der Eingabefelder für Mobilgeräte */
@@ -199,6 +199,10 @@ input[type="number"] {
   .arrow img {
     margin-left: 20px;
     max-width: 15px;
+  }
+
+  .kleiner_text{
+    text-align: left; /* Links ausrichten */
   }
   }
 
