@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100%;
     z-index: 0;
+    background-color:#F4F4F4;    
 }
 
 /*Header*/
@@ -66,7 +67,7 @@ p {
     align-items: center; /* Zentrieren sowohl horizontal als auch vertikal */
     margin-left: 300px;
     margin-right: 300px;
-    height: 50px;
+    margin-bottom: 50px;
 }
 
 .month-item {

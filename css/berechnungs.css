@@ -6,9 +6,7 @@ body {
     align-items: center;
     height: 100%;
     z-index: 0;
-    background-image: url('/Bilder/hintergrund.jpeg'); 
-    background-position: center; 
-    background-repeat: no-repeat;
+    background-image: url(/links/hintergrund.jpeg);
 }
 
 /*Header*/
@@ -46,7 +44,7 @@ header {
     margin-left: 200px;
     margin-right: 200px;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 /* Button Pink Hintergründe */

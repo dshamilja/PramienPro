@@ -7,6 +7,7 @@ body {
   height: 100%;
   z-index: 0;
   background: #F4F4F4; 
+  background-image: url(/links/hintergrund.jpeg);
 }
 
 /*Header*/
@@ -44,7 +45,6 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin: 0 auto; /* In die Mitte des Bildschirms zentrieren */
-  margin-top: 50px; /* Optional: Fügen Sie einen oberen Abstand hinzu */
   grid-template-rows: 1fr auto;
 }
 
@@ -93,7 +93,7 @@ input[type="number"] {
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px #AAAAAA solid;
+  background-color: #FFFFFF;
   padding: 10px;
   box-sizing: border-box;
   height: 40px !important;
@@ -154,11 +154,11 @@ input[type="number"] {
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px #AAAAAA solid;
   padding: 10px;
   box-sizing: border-box;
   height: 40px !important;
   font-family: Comfortaa;
+  background-color: #FFFFFF;
 }
 
 /* Stil für das Textfeld "text_weit" */
