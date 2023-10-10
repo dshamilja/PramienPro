@@ -8,9 +8,9 @@ body {
     z-index: 0;
     z-index: 0;
     background-image: url(/links/hintergrund.jpeg);
-    background-image: url(/links/hintergrund.jpeg);
+    background-repeat: no-repeat;
     font-family: 'Comfortaa', cursive;
-  
+    font-size: 20px;
 }
 
 /*Header*/
@@ -70,11 +70,14 @@ input[type="number"] {
     border: 0px solid #AAAAAA;
     border-radius: 4px;
     height: 100px;
-    font-size: 20px;
-    background-color: transparent;
-    font-family: "Comfortaa", sans-serif; /* Schriftart anpassen */
+    font-size: 16px;
+    font-family: Comfortaa;
+    font-weight: 700;
+    background: transparent;
+    color: black;
     text-align: left; /* Text links ausrichten */
-    color: #666666; /* Schriftfarbe anpassen, z.B. Schwarz (#000) */
+
+    
 }
 
 /* Stil für die Checkboxen */
@@ -126,11 +129,11 @@ input[type="number"] {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 16px;
     font-family: Comfortaa;
     font-weight: 700;
     background: transparent;
-    color: white;
+    color: black;
 }
 
 .button-text {

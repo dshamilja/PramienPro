@@ -8,6 +8,8 @@ body {
   z-index: 0;
   background: #F4F4F4; 
   background-image: url(/links/hintergrund.jpeg);
+  background-repeat: no-repeat;
+  font-size: 20px;
 }
 
 /*Header*/

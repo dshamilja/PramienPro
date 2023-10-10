@@ -7,8 +7,9 @@ body {
     height: 100%;
     z-index: 0;
     background-image: url(/links/hintergrund.jpeg);
-    background-image: url(/links/hintergrund.jpeg);
+    background-repeat: no-repeat;
     font-family: 'Comfortaa', cursive;
+    font-size: 20px;
   
 }
 
