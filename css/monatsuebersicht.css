@@ -6,7 +6,10 @@ body {
     align-items: center;
     height: 100%;
     z-index: 0;
-    background-color:#F4F4F4;    
+    background-color:#F4F4F4;
+    background-image: url(/links/hintergrund.jpeg);
+    font-family: 'Comfortaa', cursive;
+   
 }
 
 /*Header*/
@@ -55,8 +58,9 @@ p {
 
 .title-overview {
     text-align: center;
-    font-size: 36px;
     font-family: Bodoni Moda;
+    font-weight: 700;
+    font-size: 55px;
 }
 
 .container-month {

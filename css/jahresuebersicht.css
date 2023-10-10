@@ -7,6 +7,8 @@ body {
     height: 100%;
     z-index: 0;
     background-color:#F4F4F4;
+    font-family: 'Comfortaa', cursive;
+  
 }
 
 
@@ -54,7 +56,6 @@ header {
     padding: 10px;
     background: #EEB4FF;
     border-radius: 8px;
-    border: 1px white solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +86,8 @@ p {
     text-align: center;
     font-size: 36px;
     font-family: Bodoni Moda;
+    font-weight: 700;
+    font-size: 55px;
 }
 
 .berechnerfeld {
@@ -97,7 +100,6 @@ p {
     background: #AAAAAA;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px #AAAAAA solid;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
@@ -128,7 +130,6 @@ p {
     height: 50px;
     background: #AAAAAA;
     border-radius: 8px;
-    border: 1px white solid;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
