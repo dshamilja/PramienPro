@@ -142,6 +142,62 @@ p {
     padding-left: 20px; /* Abstand vom linken Rand */
 }
 
+footer {
+
+    bottom: 10px; /* Abstand zum unteren Rand auf 10px belassen */
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    height: auto; /* Ändern Sie die Höhe auf 'auto' */
+    margin-top: 20px; 
+  }
+     
+     .footer-content {
+       display: flex;
+       align-items: center; /* Vertikal zentrieren */
+       justify-content: center; /* Horizontal zentrieren */
+       font-family: 'Comfortaa', cursive;
+       font-size: 12px;
+       color: black;
+       text-decoration: none;
+     }
+     
+     .footer-links {
+       list-style: none;
+       display: flex;
+       margin: 0;
+       padding: 0;
+       text-decoration: none;
+     }
+     
+     .footer-links {
+       list-style: none;
+       display: flex;
+       margin: 0;
+       padding: 0;
+     }
+     
+     .footer-links li {
+       margin-right: 20px;
+     }
+     
+     .footer-links a {
+       color: black;
+       text-decoration: none;
+       padding: 5px 10px; /* Fügen Sie das Padding für den Logout-Button hinzu */
+       font-size: 12px;
+       cursor: pointer;
+     }
+     
+     .month-icon {
+      background-image: url('/links/kreuz.png');
+      width: 40px;
+      height: 40px;
+      margin-left: auto; /* Verschiebt das Bild ganz nach rechts */
+      background-repeat: no-repeat;
+      margin-right: 1%;;
+  }
+
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
     .title-overview  {
@@ -167,6 +223,14 @@ p {
     .month-item {
         font-size: 15px;
         }
+
+    .footer-links a {
+            color: black;
+            text-decoration: none;
+            padding: 5px 5px; /* Fügen Sie das Padding für den Logout-Button hinzu */
+            font-size: 12px;
+            cursor: pointer;
+          }
 
 
   }
