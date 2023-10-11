@@ -10,6 +10,8 @@ body {
   background-image: url(/links/hintergrund.jpeg);
   background-repeat: no-repeat;
   font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  
 }
 
 /*Header*/
@@ -38,139 +40,197 @@ header {
   max-width: 20px; /* Maximale Breite des Pfeils */
   height: auto; /* Damit der Pfeil proportional skaliert wird */
 }
-/* CSS für das Grid-Layout */
-.container {
-  width: 500px;
-  padding: 20px;
-  border-radius: 8px;
+
+.centered-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: 0 auto; /* In die Mitte des Bildschirms zentrieren */
-  margin-top: 50px; /* Optional: Fügen Sie einen oberen Abstand hinzu */
-  grid-template-rows: 1fr auto;
+  place-items: center;
+  text-align: center;
+  /* Weitere Stile für den Container hier, falls erforderlich */
 }
 
-/* Stil für die Titelzeile */
+#logoutButton {
+  text-align: center;
+}
+
 .title {
-  font-size: 50px;
-  font-family: Comfortaa;
-  font-weight: 700;
   line-height: 60px;
   word-wrap: break-word;
   text-align: center;
   margin-bottom: 20px;
   grid-column: span 2;
+  font-family: Bodoni Moda;
+  font-weight: 700;
+  font-size: 55px;
 }
 
-/* Stil für die Eingabefelder */
-input[type="date"],
-input[type="number"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #AAAAAA;
-  border-radius: 4px;
-  height: 100px;
-  font-size: 20px;
-  background-color: transparent;
-  font-family: "Comfortaa", sans-serif; /* Schriftart anpassen */
-  text-align: left; /* Text links ausrichten */
-  color: #000; /* Schriftfarbe anpassen, z.B. Schwarz (#000) */
-}
-
-
-/* Stil für die Buttons */
-.button-container {
-  display: flex;
-  gap: 10px;
+.ueberschrift {
   margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-  grid-column: span 2; /* Hier setzen wir die Spandauer auf 2, um beide Spalten abzudecken */
+
+  font-family: Bodoni Moda;
+  font-weight: 700;
+  font-size: 55px;
+}
+
+.inputfeld {
+  background-color: white;
+  border: none; /* Entfernt den Rand */
+  font-size: 16px;
+  height: 40px !important;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Comfortaa', cursive;
 }
 
 .button {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px #AAAAAA solid;
+  width: 200px; /* Breite des Buttons */
   padding: 10px;
-  box-sizing: border-box;
-  height: 40px !important;
-  font-family: Comfortaa;
+  background: #EEB4FF; /* Hintergrundfarbe */
+  border-radius: 8px; /* Runde Ecken */
+  text-align: center; /* Zentrierte Textausrichtung */
+  color: white; /* Schriftfarbe */
+  font-size: 24px; /* Schriftgröße */
+  font-weight: 700;
+  line-height: 24px;
+  word-wrap: break-word;
+  border: none; /* Kein Rand */
+  cursor: pointer; /* Zeiger bei Hover */
+  font-family: 'Comfortaa', cursive;
+  margin-top: 4%;
 }
 
-.button-input {
+.inputfeld {
+  width: 100%; /* Breite auf 100% setzen, um den Container zu füllen */
+  padding: 10px; /* Innenabstand hinzufügen */
+  border: none; /* Keinen Rand */
+  outline: none; /* Keinen Standard-Rahmen entfernen */
+  background-color: white; /* Weißen Hintergrund setzen */
+  font-size: 16px; /* Schriftgröße auf 16px einstellen */
+  color: black; /* Schriftfarbe auf schwarz setzen */
+
+}
+
+/* Füge dieses CSS am Ende deiner vorhandenen CSS-Regeln hinzu */
+.bottom-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  border-top-right-radius: 8px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+.bottom-content h2 {
+  margin: 0;
+}
+
+/* Optional: Wenn du den Text formatieren möchtest, füge zusätzliche Stile hinzu */
+.bottom-content p {
+  margin: 5px 0;
+}
+
+footer {
+ position: fixed; /* Ändere die Position auf 'fixed' */
+  bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
   width: 100%;
-  border: none;
-  outline: none;
-  font-size: 20px;
-  font-family: Comfortaa;
-  font-weight: 700;
-  background: transparent;
-  color: white;
-}
-
-.button-text {
-  color: white;
-  font-size: 20px;
-  font-family: Comfortaa;
-  font-weight: 700;
-  line-height: 24px;
-  word-wrap: break-word;
-  display: flex;
-}
-
-.calculate-container {
-  width: 200px;
   padding: 10px;
-  background: #EEB4FF;
-  border-radius: 8px;
-  justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
-  align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
-  grid-column: span 2; /* Spannen Sie über beide Spalten */
-}
-
-.calculate-content {
   text-align: center;
-  color: white;
-  font-size: 24px;
-  font-family: Comfortaa;
-  font-weight: 700;
-  line-height: 24px;
-  word-wrap: break-word;
+  height: 20px;
 }
 
-/* Stil für den Button "button_weit" */
-.button_weit {
-  grid-column: span 2; /* Spannen Sie über beide Spalten */
-}
-
-/* Stil für den Button "button_weit" */
-.button_weit input[type="text"] {
-  flex: 1;
+.footer-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px #AAAAAA solid;
+  align-items: center; /* Vertikal zentrieren */
+  justify-content: center; /* Horizontal zentrieren */
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-right: 20px;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px; /* Fügen Sie das Padding für den Logout-Button hinzu */
+  font-size: 12px;
+  cursor: pointer;
+}
+
+
+/* CSS für Mobilgeräte */
+@media (max-width: 767px) {
+  .inputfeld {
+    width: 90%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
+    padding: 10px; /* Verringern Sie den Container-Rand für Mobilgeräte */
+    height: auto; /* Automatische Höhe für Mobilgeräte */
+  }
+
+  .title {
+    font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
+  }
+
+  .ueberschrift {
+    font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
+  }
+
+  .button {
+    width: 80%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
+  }
+
+  /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
+  .logo img {
+    max-width: 150px;
+    margin-right: 2px
+  }
+
+  .arrow img {
+    margin-left: 20px;
+    max-width: 15px;
+  }
+
+  .footer-links a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 5px; /* Fügen Sie das Padding für den Logout-Button hinzu */
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  /* Text unten links*/
+.bottom-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   padding: 10px;
-  box-sizing: border-box;
-  height: 40px !important;
-  font-family: Comfortaa;
+  border-top-right-radius: 8px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20%;
+  margin-left: 2%;
+}
+  
 }
 
-/* Stil für das Textfeld "text_weit" */
-.text_weit {
-  grid-column: span 2; /* Spannen Sie über beide Spalten */
-  width: 100%; /* 100% Breite, um die Breite des Buttons darunter zu übernehmen */
-  color: #666666
-}
-
-.kleiner_text {
-  color: #666666
-}

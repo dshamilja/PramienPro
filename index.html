@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <title>Prämien Pro</title>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script> <!-- 1zu1 aus Bsp. kopiert - braucht es hier eine andere verlinkung?-->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script> <!-- 1zu1 aus Bsp. kopiert -->
@@ -23,15 +25,24 @@
 
     <h2 style="color:red" id="rootCheck">Checking location...</h2>
 
+<div class="centered-content">
     <div>
-        <h2>Magic Link Authentication</h2>
-        <input type="email" id="emailInput" placeholder="Enter your email" />
-        <button id="sendMagicLinkButton">Send Magic Link</button>
+        <h2 class="title">Anmeldung</h2>
+        <input type="email" class= "inputfeld" id="emailInput" placeholder="Enter your email" />
+        <p id="userStatus">Checking authentication status...</p>
+        <button class="button"id="sendMagicLinkButton">Login</button>
     </div>
 
-    <p id="userStatus">Checking authentication status...</p>
+ 
 
-    <button id="logoutButton">Logout</button>
+   
+</div>
+
+<div class="bottom-content">
+    <h2 class="ueberschrift" >PrämienPro</h2>
+    <p>Du willst wissen, wie viel  <br> Prämienverbilligung du dank 
+        deiner sportlichen <br> Aktivität diesen Monat sparst? Dann melde dich an<br> und berechne deine Verbilligung.</p>
+</div>
 
     <script type="module" src="/supabase.js"></script>
     <script type="module" src="/magiclink.js"></script>
@@ -51,5 +62,18 @@
             }
         });
     </script>
+
+<footer>
+    <div class="footer-content">
+        <ul class="footer-links">
+            <li><a href="/impressum">Impressum</a></li>
+            <li><a href="/agb">AGB</a></li>
+            <li><a href="/datenschutz">Datenschutz</a></li>
+            <li><a href="/Logout">Logout</a></li>
+         <!--   <li><button class="button" id="logoutButton">Logout</button></li> -->
+            
+        </ul>
+    </div>
+</footer>
 
 </body>
