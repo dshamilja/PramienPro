@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="/css/registrieren.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
     <title>Prämien Pro</title>
 </head>
+
 <body>
     <header>
         <div class="arrow">
@@ -16,44 +20,42 @@
         </div>
         <div class="logo">
             <img src="/links/Logo.png" alt="Logo">
-         </div>
+        </div>
     </header>
 
     <div class="container">
         <h1 class="title">Registration</h1>
-        <div class= "kleiner_text" >Vorname</div>
-        <div class= "kleiner_text">Nachname</div>
+        <div class="kleiner_text">Vorname</div>
+        <div class="kleiner_text">Nachname</div>
         <div class="button">
-            <input type="text" placeholder="Ihr Vorname" class="button-input">
+            <input type="text" id="inputField_first_name" placeholder="Ihr Vorname" class="button-input">
         </div>
-        
+
         <div class="button">
-            <input type="text" placeholder="Ihr Nachname" class="button-input">
+            <input type="text" id="inputField_last_name" placeholder="Ihr Nachname" class="button-input">
         </div>
         <div class="text_weit">E-Mailadresse</div>
 
         <div class="button_weit">
-            <input type="text" placeholder="Ihre E-Mail" class="button-input">
+            <input type="text" id="inputField_mail_adress" placeholder="Ihre E-Mail" class="button-input">
         </div>
 
-        <div class= "kleiner_text" >Geburtstag</div>
-        <div class= "kleiner_text">Grundprämie</div>
+        <div class="kleiner_text">Geburtstag</div>
+        <div class="kleiner_text">Grundprämie</div>
         <div class="button">
-            <input type="text" placeholder="Datum" class="button-input">
+            <input type="text" id="inputField_birthday" placeholder="Datum" class="button-input">
         </div>
-        
+
         <div class="button">
-            <input type="text" placeholder="CHF" class="button-input">
+            <input type="text" id="inputField_grundpramie" placeholder="CHF" class="button-input">
         </div>
         <div class="text_weit">AHV-Nummer</div>
         <div class="button_weit">
-            <input type="text" placeholder="Ihre AHV-Nummer" class="button-input">
+            <input type="text" id="inputField_ahv_number" placeholder="Ihre AHV-Nummer" class="button-input">
         </div>
 
-        <div class="calculate-container">
-            <div class="calculate-content center">Speichern</div>
-            
-        </div>
+        <button id="speichernButton">Speichern</button>
+
     </div>
 
     <footer>
@@ -63,10 +65,11 @@
                 <li><a href="/agb">AGB</a></li>
                 <li><a href="/datenschutz">Datenschutz</a></li>
                 <li><a href="/Logout">Logout</a></li>
-             <!--   <li><button class="button" id="logoutButton">Logout</button></li> -->
-                
             </ul>
         </div>
     </footer>
 
+    <script type="module" src="/scripts/registrieren.js"></script>
 </body>
+
+</html>
