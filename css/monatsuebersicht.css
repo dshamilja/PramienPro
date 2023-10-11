@@ -70,7 +70,7 @@ p {
     align-content: center; /* Zentrieren sowohl horizontal als auch vertikal */
     width: 80%;
     margin: 0 auto; /* Zur horizontalen Zentrierung des Containers */
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .month-item {
@@ -93,14 +93,14 @@ p {
 }
 
 footer {
-    position: fixed; /* Ändere die Position auf 'fixed' */
-     bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
-     width: 100%;
-     padding: 10px;
-     text-align: center;
-     height: 20px;
-     margin-top: 20px; 
-   }
+  position: fixed; /* Behalte die Position 'fixed' bei */
+  bottom: 10px; /* Abstand zum unteren Rand auf 10px belassen */
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  height: auto; /* Ändern Sie die Höhe auf 'auto' */
+  margin-top: 20px; 
+}
    
    .footer-content {
      display: flex;
