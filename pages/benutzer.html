@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="/css/benutzer.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
     <title>Prämien Pro</title>
 </head>
 <body>
+    
     <header>
         <div class="arrow">
             <img src="/links/arrowback.png" alt="Pfeil">
@@ -24,11 +27,11 @@
         <div class="kleiner_text">Vorname</div>
         <div class="kleiner_text">Nachname</div>
         <div class="button">
-            <input type="text" placeholder="Ihr Vorname" class="button-input">
+            <input type="text" id="inputField_first_name" placeholder="Ihr Vorname" class="button-input">
         </div>
         
         <div class="button">
-            <input type="text" placeholder="Ihr Nachname" class="button-input">
+            <input type="text" id="inputField_last_name" placeholder="Ihr Nachname" class="button-input">
         </div>
         <div class="text_weit">E-Mailadresse</div>
 
@@ -67,5 +70,5 @@
             </ul>
         </div>
     </footer>
-
+    <script type="module" src="/scripts/benutzer.js"></script>
 </body>
