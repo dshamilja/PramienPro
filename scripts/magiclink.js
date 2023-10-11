@@ -1,4 +1,4 @@
-import { supa } from "/supabase.js"
+import { supa } from "/scripts/supabase.js"
 
 // Funktion, um Magic Link zu senden
 async function sendMagicLink() {
