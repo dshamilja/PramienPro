@@ -12,20 +12,20 @@
     <title>Prämien Pro</title>
 </head>
 <body>
-    
     <header>
-        <div class="arrow">
+        <a class="arrow" href="javascript:history.back()">
             <img src="/links/arrowback.png" alt="Pfeil">
-        </div>
-        <div class="logo">
+        </a>
+        <a class="logo" href="/pages/jahresuebersicht.html">
             <img src="/links/Logo.png" alt="Logo">
-         </div>
+        </a>
     </header>
 
     <div class="container">
         <h1 class="title">Benutzer</h1>
         <div class="kleiner_text">Vorname</div>
         <div class="kleiner_text">Nachname</div>
+
         <div class="button">
             <input type="text" id="inputField_first_name" placeholder="Ihr Vorname" class="button-input">
         </div>
@@ -33,24 +33,26 @@
         <div class="button">
             <input type="text" id="inputField_last_name" placeholder="Ihr Nachname" class="button-input">
         </div>
-        <div class="text_weit">E-Mailadresse</div>
 
+        <div class="text_weit">E-Mailadresse</div>
         <div class="button_weit">
-            <input type="text" placeholder="Ihre E-Mail" class="button-input">
+            <input type="text" id="inputField_mail_address" placeholder="Ihre E-Mail" class="button-input">
         </div>
 
         <div class="kleiner_text" >Geburtstag</div>
         <div class="kleiner_text">Grundprämie</div>
+
         <div class="button">
-            <input type="text" placeholder="Datum" class="button-input">
+            <input type="text" id="inputField_birth_date" placeholder="Datum" class="button-input">
         </div>
         
         <div class="button">
-            <input type="text" placeholder="CHF" class="button-input">
+            <input type="text" id="inputField_base_premium" placeholder="CHF" class="button-input">
         </div>
+
         <div class="text_weit">AHV-Nummer</div>
         <div class="button_weit">
-            <input type="text" placeholder="Ihre AHV-Nummer" class="button-input">
+            <input type="text" id="inputField_social_insurance_number" placeholder="Ihre AHV-Nummer" class="button-input">
         </div>
 
         <div class="calculate-container">
