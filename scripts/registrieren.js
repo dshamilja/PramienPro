@@ -5,18 +5,18 @@ console.log("File Registrieren.js geladen");
 var inputField_first_name = document.getElementById("inputField_first_name");
 var inputField_last_name = document.getElementById("inputField_last_name");
 var inputField_mail_adress = document.getElementById("inputField_mail_adress");
-var inputField_birthday = document.getElementById("inputField_birthday");
-var inputField_grundpramie = document.getElementById("inputField_grundpramie");
-var inputField_ahv_number = document.getElementById("inputField_ahv_number");
+var inputField_birth_date = document.getElementById("inputField_birth_date");
+var inputField_base_premium = document.getElementById("inputField_base_premium");
+var inputField_social_insurance_number = document.getElementById("inputField_social_insurance_number");
 var speichernButton = document.getElementById("speichernButton");
 
 speichernButton.addEventListener("click", function() {
     var vorname = inputField_first_name.value;
     var nachname = inputField_last_name.value;
     var email = inputField_mail_adress.value;
-    var geburtstag = inputField_birthday.value;
-    var grundpramie = inputField_grundpramie.value;
-    var ahvNummer = inputField_ahv_number.value;
+    var geburtstag = inputField_birth_date.value;
+    var grundpramie = inputField_base_premium.value;
+    var ahvNummer = inputField_social_insurance_number.value;
 
     // Validate input fields if necessary
     if (!vorname || !nachname || !email || !geburtstag || !grundpramie || !ahvNummer) {
@@ -35,6 +35,7 @@ speichernButton.addEventListener("click", function() {
         }
     ]).then(response => {
         console.log('Daten erfolgreich gespeichert:', response);
+        window.location.href = "/pages/jahresuebersicht.html";
     }).catch(error => {
         console.error('Fehler beim Speichern der Daten:', error);
     });
