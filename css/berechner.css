@@ -100,7 +100,7 @@ input[type="number"] {
 }
 
 /* Stil für die Buttons */
-.button-container {
+.feld-container {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
@@ -109,7 +109,7 @@ input[type="number"] {
     grid-column: span 2; /* Hier setzen wir die Spandauer auf 2, um beide Spalten abzudecken */
 }
 
-.button {
+.feld {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -123,7 +123,7 @@ input[type="number"] {
     font-family: Comfortaa;
 }
 
-.button-input {
+.feld-input {
     width: 100%;
     border: none;
     outline: none;
@@ -228,7 +228,7 @@ input[type="number"] {
         height: 60px; /* Ändern Sie die Höhe der Eingabefelder für Mobilgeräte */
     }
     
-    .button {
+    .feld {
         height: 30px !important; /* Ändern Sie die Höhe der Buttons für Mobilgeräte */
     }
 

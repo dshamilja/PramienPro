@@ -74,7 +74,7 @@ header {
   grid-column: span 2; /* Hier setzen wir die Spandauer auf 2, um beide Spalten abzudecken */
 }
 
-.button {
+.feld {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ header {
   height: 40px !important;
 }
 
-.button-input {
+.feld-input {
   width: 100%;
   border: none;
   outline: none;
@@ -98,14 +98,6 @@ header {
   color: black;
 }
 
-.button-text {
-  color: white;
-  font-weight: 700;
-  line-height: 24px;
-  word-wrap: break-word;
-  display: flex;
-}
-
 .calculate-container {
   width: 200px;
   padding: 10px;
@@ -114,9 +106,6 @@ header {
   justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
   align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
   grid-column: span 2; /* Spannen Sie über beide Spalten */
-}
-
-.calculate-content {
   text-align: center;
   color: white;
   font-size: 24px;
@@ -124,15 +113,16 @@ header {
   font-weight: 700;
   line-height: 24px;
   word-wrap: break-word;
+  border: none;
 }
 
 /* Stil für den Button "button_weit" */
-.button_weit {
+.feld_weit {
   grid-column: span 2; /* Spannen Sie über beide Spalten */
 }
 
 /* Stil für den Button "button_weit" */
-.button_weit input[type="text"] {
+.feld_weit input[type="text"] {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -159,7 +149,7 @@ header {
 
 
 footer {
-  position: fixed; /* Ändere die Position auf 'fixed' */
+
    bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
    width: 100%;
    padding: 10px;
@@ -217,7 +207,7 @@ footer {
     font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
   }
 
-  .button-container {
+  .container {
     flex-direction: column; /* Ändern Sie die Ausrichtung der Buttons für Mobilgeräte auf vertikal */
     align-items: center; /* Zentrieren Sie die Buttons vertikal für Mobilgeräte */
   }

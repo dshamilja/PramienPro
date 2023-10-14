@@ -70,7 +70,7 @@ p {
     align-content: center; /* Zentrieren sowohl horizontal als auch vertikal */
     width: 80%;
     margin: 0 auto; /* Zur horizontalen Zentrierung des Containers */
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .month-item {
@@ -93,13 +93,11 @@ p {
 }
 
 footer {
-
-  bottom: 10px; /* Abstand zum unteren Rand auf 10px belassen */
+  bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
   width: 100%;
   padding: 10px;
   text-align: center;
-  height: auto; /* Ändern Sie die Höhe auf 'auto' */
-  margin-top: 20px; 
+  height: 20px;
 }
    
    .footer-content {
@@ -155,11 +153,6 @@ footer {
       font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
     }
   
-    .button-container {
-      flex-direction: column; /* Ändern Sie die Ausrichtung der Buttons für Mobilgeräte auf vertikal */
-      align-items: center; /* Zentrieren Sie die Buttons vertikal für Mobilgeräte */
-    }
-  
     /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
     .logo img {
       max-width: 150px;
@@ -175,7 +168,7 @@ footer {
         font-size: 15px;
         }
     
-.footer-links a {
+    .footer-links a {
             color: black;
             text-decoration: none;
             padding: 5px 5px; /* Fügen Sie das Padding für den Logout-Button hinzu */

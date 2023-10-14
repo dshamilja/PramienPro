@@ -40,7 +40,7 @@ header {
     height: auto; /* Damit der Pfeil proportional skaliert wird */
 }
 
-.button-container {
+.container {
     display: flex;
     justify-content: center; /* Zentrieren Sie die Buttons horizontal */
     align-items: center; /* Zentrieren Sie die Buttons vertikal */
@@ -53,7 +53,7 @@ header {
 
 
 /* Button Pink Hintergründe */
-.button {
+.feld {
     width: 100%;
     padding: 10px;
     background: #EEB4FF;
@@ -64,7 +64,7 @@ header {
     align-items: center;
 }
 
-.button-text {
+.feld-text {
     text-align: center;
     color: white;
     font-size: 24px;
@@ -74,7 +74,7 @@ header {
     word-wrap: break-word;
 }
 
-.button-text_weiss{
+.feld-text_weiss{
     text-align: center;
     color: #EEB4FF;
     font-size: 24px;
@@ -83,11 +83,15 @@ header {
     line-height: 24px;
     word-wrap: break-word;
 }
-.button:hover {
+.feld:hover {
     background: #AAAAAA;
 }
 
-.button_weiss {
+.feld_weiss:hover {
+  background: #AAAAAA;
+}
+
+.feld_weiss {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -226,11 +230,6 @@ footer {
       font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
     }
   
-    .button-container {
-      flex-direction: column; /* Ändern Sie die Ausrichtung der Buttons für Mobilgeräte auf vertikal */
-      align-items: center; /* Zentrieren Sie die Buttons vertikal für Mobilgeräte */
-    }
-  
     /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
     .logo img {
       max-width: 150px;
@@ -249,4 +248,5 @@ footer {
         font-size: 12px;
         cursor: pointer;
       }
+
   }

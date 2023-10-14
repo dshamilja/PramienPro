@@ -9,7 +9,6 @@ body {
     background-color:#F4F4F4;
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
-  
 }
 
 /*Header*/
@@ -39,7 +38,7 @@ header {
     height: auto; /* Damit der Pfeil proportional skaliert wird */
 }
 
-.button-container {
+.container {
     display: flex;
     justify-content: center; /* Zentrieren Sie die Buttons horizontal */
     align-items: center; /* Zentrieren Sie die Buttons vertikal */
@@ -50,7 +49,7 @@ header {
 }
 
 /* Button Pink Hintergründe */
-.button {
+.feld {
     width: 100%;
     padding: 10px;
     background: #EEB4FF;
@@ -61,7 +60,7 @@ header {
     align-items: center;
 }
 
-.button-text {
+.feld-text {
     text-align: center;
     color: white;
     font-size: 24px;
@@ -71,7 +70,7 @@ header {
     word-wrap: break-word;
 }
 
-.button:hover {
+.feld:hover {
     background: #AAAAAA;
 }
 
@@ -121,7 +120,7 @@ p {
     align-content: center; /* Zentrieren sowohl horizontal als auch vertikal */
     width: 80%;
     margin: 0 auto; /* Zur horizontalen Zentrierung des Containers */
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .month-item {
@@ -144,12 +143,12 @@ p {
 
 footer {
 
-    bottom: 10px; /* Abstand zum unteren Rand auf 10px belassen */
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    height: auto; /* Ändern Sie die Höhe auf 'auto' */
-    margin-top: 20px; 
+  position: fixed; /* Ändere die Position auf 'fixed' */
+  bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  height: 20px;
   }
      
      .footer-content {
@@ -204,7 +203,7 @@ footer {
       font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
     }
   
-    .button-container {
+    .container {
       flex-direction: column; /* Ändern Sie die Ausrichtung der Buttons für Mobilgeräte auf vertikal */
       align-items: center; /* Zentrieren Sie die Buttons vertikal für Mobilgeräte */
     }

@@ -89,7 +89,7 @@ input[type="number"] {
     grid-column: span 2; /* Hier setzen wir die Spandauer auf 2, um beide Spalten abzudecken */
 }
 
-.button {
+.feld {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@ input[type="number"] {
     font-family: Comfortaa;
 }
 
-.button-input {
+.feld-input {
     width: 100%;
     border: none;
     outline: none;
@@ -146,12 +146,12 @@ input[type="number"] {
 }
 
 /* Stil für den Button "button_weit" */
-.button_weit {
+.feld_weit {
     grid-column: span 2; /* Spannen Sie über beide Spalten */
 }
 
 /* Stil für den Button "button_weit" */
-.button_weit input[type="text"] {
+.feld_weit input[type="text"] {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -178,7 +178,6 @@ input[type="number"] {
   }
 
   footer {
-    position: fixed; /* Ändere die Position auf 'fixed' */
      bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
      width: 100%;
      padding: 10px;
@@ -269,6 +268,13 @@ input[type="number"] {
   }
   
   }
+
+  @media (max-height: 1079px) {
+    .container {
+        grid-row: 1; /* Container oben auf dem Bildschirm positionieren */
+    }
+}
+
 
 
   
