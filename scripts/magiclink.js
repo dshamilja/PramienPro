@@ -9,6 +9,7 @@ async function sendMagicLink() {
         console.error("Error sending magic link: ", error.message);
     } else {
         console.log("Magic link sent to ", email);
+        alert("Magic Link wurde versendet. Bitte prüfen Sie Ihre E-Mail und klicken Sie auf den Link, um sich einzuloggen.");
     }
 }
 
@@ -18,6 +19,8 @@ function updateUserStatus(user) {
   
   if (user) {
       userStatusElement.textContent = `Authenticated as: ${user.email}`;
+      
+      redirectToUrl(user);
   } else {
       userStatusElement.textContent = "Not authenticated.";
   }
@@ -33,13 +36,20 @@ document.getElementById('sendMagicLinkButton').addEventListener('click', (event)
     sendMagicLink();
 });
 
+
+
+
+
+
 // Listener, für Änderungen des Auth Status
 // UserStatus wird aktualisiert, wenn sich der Auth Status ändert
 supa.auth.onAuthStateChange((event, session) => {
   if (event === "SIGNED_IN") {
       console.log("User signed in: ", session.user);
-      window.location.href = "../pages/jahresuebersicht.html";
+
       updateUserStatus(session.user);
+
+
   } else if (event === "SIGNED_OUT") {
       console.log("User signed out");
       updateUserStatus(null);
@@ -60,3 +70,30 @@ async function logout() {
 }
 
 document.getElementById('logoutButton').addEventListener('click', logout);
+
+async function redirectToUrl(user){
+
+    const { data , error } = await supa
+    .from('profiles')
+    .select('*')
+    .eq('id', user.id)
+    .single();
+
+    if(error){
+        console.log("HALT STOP: " + error);
+    }
+
+    console.log(data);
+
+    if(data.length == 0 || data == null) {
+        window.location.href = "../pages/benutzer.html";
+        return;
+    } else if(data.social_insurance_number == null || data.social_insurance_number == ""){
+        window.location.href = "../pages/benutzer.html";
+        return;
+    } else {
+        window.location.href = "../pages/jahresuebersicht.html";
+        return;
+    }
+
+}
