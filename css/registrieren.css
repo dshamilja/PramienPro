@@ -98,6 +98,10 @@ header {
   color: black;
 }
 
+.feld-input::placeholder {
+  color: black;
+}
+
 .calculate-container {
   width: 200px;
   padding: 10px;
