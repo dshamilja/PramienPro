@@ -9,34 +9,43 @@ body {
     background-color:#F4F4F4;
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
-   
 }
 
 /*Header*/
 header {
-    top: 0; /* Position oben auf dem Bildschirm */
-    left: 0;
-    right: 0;
-    padding: 10px; /* Innenabstand des Headers */
-    height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
-    display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
-    justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
-    align-items: center; /* Um die Elemente vertikal zu zentrieren */
+  top: 0; /* Position oben auf dem Bildschirm */
+  left: 0;
+  right: 0;
+  padding: 10px; /* Innenabstand des Headers */
+  height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
+  display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
+  justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
+  align-items: center; /* Um die Elemente vertikal zu zentrieren */
 }
 
 /*Header*/
 .logo img {
-    max-width: 200px; /* Maximale Breite des Logos */
-    height: auto; /* Damit das Logo proportional skaliert wird */
-    margin-right: 60px;
-    margin-top: 20px;
+  max-width: 200px; /* Maximale Breite des Logos */
+  height: auto; /* Damit das Logo proportional skaliert wird */
+  margin-right: 40px; /* Margin für das Logo angepasst */
+  margin-top: 20px;
 }
 
 /*Header*/
 .arrow img {
-    margin-left: 80px;
-    max-width: 20px; /* Maximale Breite des Pfeils */
-    height: auto; /* Damit der Pfeil proportional skaliert wird */
+  margin-left: 40px; /* Margin für die Pfeiltaste angepasst */
+  max-width: 20px; /* Maximale Breite des Pfeils */
+  height: auto; /* Damit der Pfeil proportional skaliert wird */
+}
+
+.month-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  background-image: url('../links/kreuz.png'); /* Pfad zum Bild relativ zur CSS-Datei */
+  background-size: cover; /* Optional: An die Größe anpassen */
+  background-repeat: no-repeat;
+  margin-right: 1%;
 }
 
 .button-container {
@@ -137,15 +146,6 @@ footer {
      cursor: pointer;
    }
    
-   .month-icon {
-    background-image: url('/links/kreuz.png');
-    width: 40px;
-    height: 40px;
-    margin-left: auto; /* Verschiebt das Bild ganz nach rechts */
-    background-repeat: no-repeat;
-    margin-right: 1%;;
-}
-
 
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {

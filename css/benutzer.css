@@ -15,30 +15,31 @@ body {
 
 /*Header*/
 header {
-    top: 0; /* Position oben auf dem Bildschirm */
-    left: 0;
-    right: 0;
-    padding: 10px; /* Innenabstand des Headers */
-    height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
-    display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
-    justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
-    align-items: center; /* Um die Elemente vertikal zu zentrieren */
+  top: 0; /* Position oben auf dem Bildschirm */
+  left: 0;
+  right: 0;
+  padding: 10px; /* Innenabstand des Headers */
+  height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
+  display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
+  justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
+  align-items: center; /* Um die Elemente vertikal zu zentrieren */
 }
 
 /*Header*/
 .logo img {
-    max-width: 200px; /* Maximale Breite des Logos */
-    height: auto; /* Damit das Logo proportional skaliert wird */
-    margin-right: 60px;
-    margin-top: 20px;
+  max-width: 200px; /* Maximale Breite des Logos */
+  height: auto; /* Damit das Logo proportional skaliert wird */
+  margin-right: 40px; /* Margin für das Logo angepasst */
+  margin-top: 20px;
 }
 
 /*Header*/
 .arrow img {
-    margin-left: 80px;
-    max-width: 20px; /* Maximale Breite des Pfeils */
-    height: auto; /* Damit der Pfeil proportional skaliert wird */
+  margin-left: 40px; /* Margin für die Pfeiltaste angepasst */
+  max-width: 20px; /* Maximale Breite des Pfeils */
+  height: auto; /* Damit der Pfeil proportional skaliert wird */
 }
+
 /* CSS für das Grid-Layout */
 .container {
     width: 500px;
@@ -178,6 +179,7 @@ input[type="number"] {
   }
 
   footer {
+  
      bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
      width: 100%;
      padding: 10px;
