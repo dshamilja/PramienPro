@@ -135,6 +135,10 @@ input[type="number"] {
     color: black;
 }
 
+.feld-input::placeholder {
+  color: black;
+}
+
 .button-text {
     color: white;
     font-size: 20px;
