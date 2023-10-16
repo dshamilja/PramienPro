@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <title>Prämien Pro</title>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 </head>
 <body>
     <header>
@@ -53,11 +55,9 @@
                 <li><a href="/agb">AGB</a></li>
                 <li><a href="/datenschutz">Datenschutz</a></li>
                 <li><a href="/Logout">Logout</a></li>
-             <!--   <li><button class="button" id="logoutButton">Logout</button></li> -->
-                
+                <li><button id="logoutButton" class="button">Logout</button></li>
             </ul>
         </div>
     </footer>
-    
-
+    <script type="module" src="../scripts/jahresuebersicht.js"></script>
 </body>

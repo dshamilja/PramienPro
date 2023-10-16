@@ -54,7 +54,9 @@ async function logout() {
   } else {
       updateUserStatus(null);
       console.log("User logged out successfully.");
+      // Redirect to login page after successful logout
+      window.location.href = 'index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
   }
 }
 
-//document.getElementById('logoutButton').addEventListener('click', logout);
+document.getElementById('logoutButton').addEventListener('click', logout);
