@@ -30,13 +30,13 @@ header {
 .logo img {
   max-width: 200px; /* Maximale Breite des Logos */
   height: auto; /* Damit das Logo proportional skaliert wird */
-  margin-right: 60px;
+  margin-right: 40px; /* Margin für das Logo angepasst */
   margin-top: 20px;
 }
 
 /*Header*/
 .arrow img {
-  margin-left: 80px;
+  margin-left: 40px; /* Margin für die Pfeiltaste angepasst */
   max-width: 20px; /* Maximale Breite des Pfeils */
   height: auto; /* Damit der Pfeil proportional skaliert wird */
 }
