@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <title>Prämien Pro</title>
@@ -23,14 +23,13 @@
         </a>
     </header>
 
-    <h2 style="color:red" id="rootCheck">Checking location...</h2>
 
 <div class="centered-content">
     <div>
         <h2 class="title">Anmeldung</h2>
         <input type="email" class= "inputfeld" id="emailInput" placeholder="Enter your email" />
         <p id="userStatus">Checking authentication status...</p>
-        <button class="button"id="sendMagicLinkButton">Login</button>
+        <button class="button" id="sendMagicLinkButton">Login</button>
     </div>
 
  
@@ -43,24 +42,9 @@
         deiner sportlichen <br> Aktivität diesen Monat sparst? Dann melde dich an<br> und berechne deine Verbilligung.</p>
 </div>
 
-    <script type="module" src="/supabase.js"></script>
-    <script type="module" src="/magiclink.js"></script>
+    <script type="module" src="./scripts/supabase.js"></script>
+    <script type="module" src="./scripts/magiclink.js"></script>
 
-    <script>
-
-        // script prüft, ob wir uns auf der root des servers befinden
-
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const rootCheckElem = document.getElementById('rootCheck');
-    
-            if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-                rootCheckElem.textContent = "You are on the root of the server.";
-                rootCheckElem.style.display = "none"; // Hide it if you don't want any message on the root
-            } else {
-                rootCheckElem.innerHTML = 'Authentication funktioniert nur auf der Root des Servers! Das ist nicht hier, sondern <a href="/"> da </a>';
-            }
-        });
-    </script>
 
 <footer>
     <div class="footer-content">

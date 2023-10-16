@@ -3,10 +3,9 @@ import { supa } from "/scripts/supabase.js"
 // Funktion, um Magic Link zu senden
 async function sendMagicLink() {
     const email = document.getElementById('emailInput').value;
-    const { error } = await supa.auth.signIn({ email });
+    const { error } = await supa.auth.signIn({ email: email });
     
     if (error) {
-
         console.error("Error sending magic link: ", error.message);
     } else {
         console.log("Magic link sent to ", email);
@@ -29,13 +28,17 @@ const initialUser = supa.auth.user();
 updateUserStatus(initialUser);
 
 // Eventlistener für Magic Link Button
-document.getElementById('sendMagicLinkButton').addEventListener('click', sendMagicLink);
+document.getElementById('sendMagicLinkButton').addEventListener('click', (event) => {
+    event.preventDefault();
+    sendMagicLink();
+});
 
 // Listener, für Änderungen des Auth Status
 // UserStatus wird aktualisiert, wenn sich der Auth Status ändert
 supa.auth.onAuthStateChange((event, session) => {
   if (event === "SIGNED_IN") {
       console.log("User signed in: ", session.user);
+      window.location.href = "../pages/jahresuebersicht.html";
       updateUserStatus(session.user);
   } else if (event === "SIGNED_OUT") {
       console.log("User signed out");
@@ -54,4 +57,4 @@ async function logout() {
   }
 }
 
-document.getElementById('logoutButton').addEventListener('click', logout);
+//document.getElementById('logoutButton').addEventListener('click', logout);
