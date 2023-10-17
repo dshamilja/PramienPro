@@ -1,6 +1,7 @@
 import { supa } from "/scripts/supabase.js"
 
 // Funktion, um Magic Link zu senden
+
 async function sendMagicLink() {
     const email = document.getElementById('emailInput').value;
     const { error } = await supa.auth.signIn({ email: email });
@@ -15,6 +16,7 @@ async function sendMagicLink() {
 
 // Funktion, um User Status zu aktualisieren
 function updateUserStatus(user) {
+    console.log(user)
   const userStatusElement = document.getElementById('userStatus');
   
   if (user) {
