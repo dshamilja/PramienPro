@@ -34,27 +34,6 @@ console.log("File Registrieren.js geladen");
 
 
 
-
-
-
-/*supa.from("profiles_duplicate").select([
-    {
-        first_name: vorname,
-        last_name: nachname,
-        mail_address: email,
-        birth_date: geburtstag,
-        base_premium: grundpramie,
-        social_insurance_number: ahvNummer
-    }
-]).then(response => {
-    console.log('Daten erfolgreich gespeichert:', response);
-}).catch(error => {
-    console.error('Fehler beim Speichern der Daten:', error);
-});*/
-
-
-
-
 //Code von Reneé
 
 // Funktion, um die Benutzerdaten zu aktualisieren
@@ -90,26 +69,6 @@ console.log("File Registrieren.js geladen");
 
 
 
-
-
-
-
-// Logout über Logoutbutton im Footer
-document.getElementById('logoutButton').addEventListener('click', function() {
-    logout();
-});
-
-async function logout() {
-    const { error } = await supa.auth.signOut();
-    if (error) {
-        console.error("Error during logout:", error);
-    } else {
-        console.log("User logged out successfully.");
-        // Redirect to login page after successful logout
-        window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
-    }
-}
-
 async function updateUser(user) {
     const first_name = document.getElementById("inputField_first_name").value;
     const last_name = document.getElementById("inputField_last_name").value;
@@ -143,4 +102,22 @@ async function updateUser(user) {
         window.location.href = "./jahresuebersicht.html";
     }
 
+}
+
+
+
+// Logout über Logoutbutton im Footer
+document.getElementById('logoutButton').addEventListener('click', function() {
+    logout();
+});
+
+async function logout() {
+    const { error } = await supa.auth.signOut();
+    if (error) {
+        console.error("Error during logout:", error);
+    } else {
+        console.log("User logged out successfully.");
+        // Redirect to login page after successful logout
+        window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
+    }
 }
