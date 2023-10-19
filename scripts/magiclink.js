@@ -2,15 +2,27 @@ import { supa } from "/scripts/supabase.js"
 
 // Funktion, um Magic Link zu senden
 
+const emailInput = document.getElementById('emailInput');
+const loginButton = document.getElementById('sendMagicLinkButton');
+
 async function sendMagicLink() {
-    const email = document.getElementById('emailInput').value;
+    const email = emailInput.value;
+
+    emailInput.setAttribute('disabled', 'disabled');
+    loginButton.setAttribute('disabled', 'disabled');
+
     const { error } = await supa.auth.signIn({ email: email });
     
     if (error) {
         console.error("Error sending magic link: ", error.message);
+        emailInput.removeAttribute('disabled');
+        loginButton.removeAttribute('disabled');
     } else {
         console.log("Magic link sent to ", email);
+        
         alert("Magic Link wurde versendet. Bitte prüfen Sie Ihre E-Mail und klicken Sie auf den Link, um sich einzuloggen.");
+        emailInput.removeAttribute('disabled');
+        loginButton.removeAttribute('disabled');
     }
 }
 
