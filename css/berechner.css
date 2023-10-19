@@ -54,13 +54,14 @@ header {
 
 /* Stil für die Titelzeile */
 .title {
-    line-height: 60px;
-    text-align: center;
-    margin-bottom: 20px;
-    grid-column: span 2;
-    font-family: Bodoni Moda;
-    font-weight: 700;
-    font-size: 55px;
+  word-wrap: break-word;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  grid-column: span 2;
+  font-family: Bodoni Moda;
+  font-weight: 700;
+  font-size: 55px;
 }
 
 /* Stil für die Eingabefelder */
@@ -178,15 +179,16 @@ input[type="number"] {
     color: #666666
   }
 
- /* Stil für den Footer */
- footer {
-  display: flex;
-  justify-content: center; /* Zentriert den Text horizontal */
-  align-items: center; /* Zentriert den Text vertikal */
-  margin: 0; /* Entferne den äußeren Margin des Footers */
-  padding: 0; /* Entferne den äußeren Padding des Footers */
-  bottom: 0;
-}
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* You can adjust the background color if needed */
+    padding: 0; /* You can add padding to the footer as needed */
+  }
 
 .footerdiv{
     margin-top: 2%;
