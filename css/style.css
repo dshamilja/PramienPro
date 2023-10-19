@@ -263,5 +263,9 @@ footer button {
 .divfeld{
   width: 85%;
 }
+
+p{
+  font-size: 15px;
+}
 }
 
