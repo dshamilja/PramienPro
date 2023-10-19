@@ -71,6 +71,7 @@ header {
   font-size: 55px;
 }
 
+
 .inputfeld {
   background-color: white;
   border: none; /* Entfernt den Rand */
@@ -103,14 +104,21 @@ header {
 }
 
 .inputfeld {
-  width: 100%; /* Breite auf 100% setzen, um den Container zu füllen */
+  width: 500px;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  height: 40px !important;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Comfortaa', cursive;
+  border-radius: 8px; /* Hinzufügen von abgerundeten Ecken */
   padding: 10px; /* Innenabstand hinzufügen */
-  border: none; /* Keinen Rand */
-  outline: none; /* Keinen Standard-Rahmen entfernen */
-  background-color: white; /* Weißen Hintergrund setzen */
-  font-size: 16px; /* Schriftgröße auf 16px einstellen */
-  color: black; /* Schriftfarbe auf schwarz setzen */
+  color: black;
+}
 
+.inputfeld::placeholder {
+  color: black;
 }
 
 /* Füge dieses CSS am Ende deiner vorhandenen CSS-Regeln hinzu */
@@ -146,7 +154,7 @@ header {
 }
 
 .footerdiv{
-    margin-top: 2%;
+    margin-top: 1%;
     max-width:100%;
     padding: 20px;
     border-radius: 8px;
@@ -192,7 +200,7 @@ footer button {
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
   .inputfeld {
-    width: 90%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
+    width: 100%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
     padding: 10px; /* Verringern Sie den Container-Rand für Mobilgeräte */
     height: auto; /* Automatische Höhe für Mobilgeräte */
   }
@@ -203,10 +211,6 @@ footer button {
 
   .ueberschrift {
     font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
-  }
-
-  .button {
-    width: 80%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
   }
 
   /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
@@ -220,6 +224,7 @@ footer button {
     max-width: 15px;
   }
 
+ 
   .footer-links a {
     color: black;
     text-decoration: none;
@@ -227,6 +232,20 @@ footer button {
     font-size: 12px;
     cursor: pointer;
   }
+
+  footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+  }
+
 
   /* Text unten links*/
 .bottom-content {
@@ -237,9 +256,12 @@ footer button {
   font-family: 'Comfortaa', cursive;
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 20%;
+  margin-bottom: 18%;
   margin-left: 2%;
+  margin-top: 50px;
 }
-  
+.divfeld{
+  width: 85%;
+}
 }
 
