@@ -1,3 +1,5 @@
+import { supa } from "/scripts/supabase.js"
+
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {
     logout();
