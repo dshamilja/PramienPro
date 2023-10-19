@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <title>Prämien Pro</title>
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+        <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 </head>
 
@@ -23,16 +23,15 @@
     </header>
 
     <div class="container">
-        <button class="feld_weiss">
+        <div class="feld_weiss">
             <div class="feld-text_weiss">Nicht speichern</div>
-        </button>
-        <button class="feld">
-            <div class="feld-text">Speichern</div>
-        </button>
+        </div>
+        <div class="feld">
+            <a class="feld-text" href="/pages/jahresuebersicht.html">Speichern</a>
+        </div>
     </div>
     
-    
-    <p>Du hast CHF 50.00 gespart!</p>
+    <p id="message">Du hast CHF 50.00 gespart!</p>
 
     <footer>
         <div class="footer-content">

@@ -8,8 +8,6 @@ const initialUser = supa.auth.user();
 
 var datePicker = document.getElementById("date-picker");
 var durationInput = document.querySelector(".feld-input");
-var ausdauerRadio = document.querySelector('input[name="sport"][value="Ausdauer"]');
-var kraftRadio = document.querySelector('input[name="sport"][value="Kraft"]');
 var speichernButton = document.querySelector(".calculate-content");
 
 speichernButton.addEventListener("click", (event) => {
@@ -20,9 +18,9 @@ speichernButton.addEventListener("click", (event) => {
 async function registerActivity() {
     var datum = datePicker.value;
     var dauer = durationInput.value;
-    var sportart = document.querySelector('input[name="sport"]:checked').value;
-    const kraftsport = false;
+    var sportart = document.querySelector('input[type=radio]:checked').value;
 
+    let sportartBool;
 
     console.log(sportart);
 
@@ -34,11 +32,14 @@ async function registerActivity() {
 
     let savedMoney;
 
-    if(sportart = kraftsport){
+    if(sportart == "2"){
         savedMoney = dauer * 0.01;
+        sportartBool = false;
     } else {
         savedMoney = dauer * 0.008;
+        sportartBool = true;
     }
+
 
     const { data, error } = await supa
         .from("activities")
@@ -48,14 +49,18 @@ async function registerActivity() {
                 date: datum,
                 duration: dauer,
                 saved_money: savedMoney,
-                sport_type: sportart
+                sport_type: sportartBool
             }
         );
 
     if (error) {
         console.error("Fehler beim Speichern der Daten:", error);
     } else {
+        localStorage.setItem("saved_money", savedMoney);
         console.log("Daten erfolgreich gespeichert:", data);
+        datePicker.value = "";
+        durationInput.value = "";
+        document.querySelector('input[name="sport"]:checked').checked = false;
         window.location.href = "/pages/berechnung.html";
     }
 }
