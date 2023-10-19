@@ -3,6 +3,8 @@ import { supa } from "../scripts/supabase.js"
 
 console.log("File berechner.js geladen");
 
+const initialUser = supa.auth.user();
+
 var datePicker = document.getElementById("date-picker");
 var durationInput = document.querySelector(".feld-input");
 var ausdauerRadio = document.querySelector('input[name="sport"][value="Ausdauer"]');
@@ -17,7 +19,11 @@ speichernButton.addEventListener("click", (event) => {
 async function registerActivity() {
     var datum = datePicker.value;
     var dauer = durationInput.value;
-    var sportart = ausdauerRadio.checked ? "Ausdauer" : (kraftRadio.checked ? "Kraft" : null);
+    var sportart = document.querySelector('input[name="sport"]:checked').value;
+    const kraftsport = false;
+
+
+    console.log(sportart);
 
     // Validate input fields if necessary
     if (!datum || !dauer || !sportart) {
@@ -25,15 +31,25 @@ async function registerActivity() {
         return;
     }
 
+    let savedMoney;
+
+    if(sportart = kraftsport){
+        savedMoney = dauer * 0.01;
+    } else {
+        savedMoney = dauer * 0.008;
+    }
+
     const { data, error } = await supa
         .from("activities")
-        .insert([
+        .insert(
             {
+                user_id: initialUser.id,
                 date: datum,
                 duration: dauer,
+                saved_money: savedMoney,
                 sport_type: sportart
             }
-        ]);
+        );
 
     if (error) {
         console.error("Fehler beim Speichern der Daten:", error);
