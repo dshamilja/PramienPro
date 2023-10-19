@@ -54,10 +54,10 @@ header {
 
 /* Stil für die Titelzeile */
 .title {
-    line-height: 60px;
     word-wrap: break-word;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     grid-column: span 2;
     font-family: Bodoni Moda;
     font-weight: 700;
@@ -130,24 +130,22 @@ input[type="number"] {
 }
 
 .calculate-container {
-    width: 200px;
-    padding: 10px;
-    background: #EEB4FF;
-    border-radius: 8px;
-    justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
-    align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
-    grid-column: span 2; /* Spannen Sie über beide Spalten */
-    margin-top: 25px;
-}
-
-.calculate-content {
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    font-family: Comfortaa;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
+  width: 200px;
+  padding: 10px;
+  background: #EEB4FF;
+  border-radius: 8px;
+  justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
+  align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
+  grid-column: span 2; /* Spannen Sie über beide Spalten */
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: Comfortaa;
+  font-weight: 700;
+  line-height: 24px;
+  word-wrap: break-word;
+  border: none;
+  margin-top: 15px;
 }
 
 /* Stil für den Button "button_weit" */
@@ -182,33 +180,37 @@ input[type="number"] {
     color: #666666
   }
 
-  footer {
-    display: flex;
-    justify-content: center; /* Zentriert den Text horizontal */
-    align-items: center; /* Zentriert den Text vertikal */
+ /* Stil für den Footer */
+footer {
+  display: flex;
+  justify-content: center; /* Zentriert den Text horizontal */
+  align-items: center; /* Zentriert den Text vertikal */
+  margin: 0; /* Entferne den äußeren Margin des Footers */
+  padding: 0; /* Entferne den äußeren Padding des Footers */
+  bottom: 0;
 }
 
 .footerdiv{
-    margin:0px auto;
+    margin-top: 2%;
     max-width:100%;
     padding: 20px;
     border-radius: 8px;
     display: grid;
     gap: 10px;
-    margin: 0 auto; /* In die Mitte des Bildschirms zentrieren */
+
 }
 
 footer ul {
   display: flex;
-  gap: 43px;
-  justify-content: space-between; /* Gleichmäßiger Abstand zwischen den Elementen */
-  margin: 0 auto; /* Horizontal zentrieren */
-  align-items: center; /* Vertikal zentrieren */
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
   font-family: 'Comfortaa', cursive;
   font-size: 12px;
   color: black;
   text-decoration: none;
   list-style: none;
+  padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
 }
 
 /* Stil für Links im Footer */
@@ -219,17 +221,18 @@ footer a {
 
 /* Stil für den Button im Footer */
 footer button {
-  text-decoration: none; /* Entfernt die Unterstreichung */
-  color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
-  background: transparent; /* Entfernt den Hintergrund */
-  border: none; /* Entfernt die Rahmen */
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  border: none;
   cursor: pointer;
   font-family: 'Comfortaa', cursive;
   font-size: 12px;
-  height: 12px; /* Passen Sie die Höhe nach Bedarf an */
-  line-height: 12px; /* Passen Sie die Zeilenhöhe an die Höhe an */
+  height: 12px;
+  line-height: 12px;
+  margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
+  padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
-
           /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
     /* Ändern Sie hier die Stile für Mobilgeräte */
@@ -274,9 +277,21 @@ footer button {
     font-size: 12px;
     cursor: pointer;
   }
-  
+
+  footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
   }
 
+  }
   @media (max-height: 1079px) {
     .container {
         grid-row: 1; /* Container oben auf dem Bildschirm positionieren */
