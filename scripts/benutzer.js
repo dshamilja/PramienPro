@@ -31,42 +31,7 @@ console.log("File Registrieren.js geladen");
  //hier müsste schlussendlich die id des aktuell eingeloggten users abgerufen werden!!!
  
 
-
-
-
-//Code von Reneé
-
-// Funktion, um die Benutzerdaten zu aktualisieren
-// function updateUserData() {
-//     const updatedUserData = {
-//       first_name: document.getElementById("inputField_first_name").value,
-//       last_name: document.getElementById("inputField_last_name").value,
-//       mail_address: document.getElementById("inputField_mail_address").value,
-//       birth_date: document.getElementById("inputField_birth_date").value,
-//       base_premium: document.getElementById("inputField_base_premium").value,
-//       social_insurance_number: document.getElementById("inputField_social_insurance_number").value
-//     };
-
-//     supa
-//       .from('profiles_duplicate')
-//       .update(updatedUserData)
-//       .eq('id', id)
-//       .then(response => {
-//         console.log("Benutzerdaten erfolgreich aktualisiert:", response.body);
-//       })
-//       .catch(error => {
-//         console.error("Fehler beim Aktualisieren der Benutzerdaten:", error.message);
-//       });
-//   }
-
-//   // Event-Listener für Änderungen an den Input-Feldern
-//   document.getElementById("inputField_first_name").addEventListener("change", updateUserData);
-//   document.getElementById("inputField_last_name").addEventListener("change", updateUserData);
-//   document.getElementById("inputField_mail_address").addEventListener("change", updateUserData);
-//   document.getElementById("inputField_birth_date").addEventListener("change", updateUserData);
-//   document.getElementById("inputField_base_premium").addEventListener("change", updateUserData);
-//   document.getElementById("inputField_social_insurance_number").addEventListener("change", updateUserData);
-
+ 
 
 
 async function updateUser(user) {

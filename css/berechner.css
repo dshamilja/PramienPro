@@ -159,6 +159,10 @@ input[type="number"] {
     grid-column: span 2; /* Spannen Sie über beide Spalten */
 }
 
+.calculate-container:hover {
+  background: #AAAAAA;
+}
+
 .calculate-content {
     text-align: center;
     color: white;
