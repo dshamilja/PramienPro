@@ -12,11 +12,9 @@ const monthContainer = document.querySelector('.container-month');
 
 const thisYear = new Date().getFullYear();
 
-let yearlySaved;
+let yearlySaved = 0.0;
 
 fetchMonth();
-
-
 
 async function fetchMonth(){
 
@@ -57,10 +55,11 @@ async function fetchMonth(){
 
         data.forEach(async (activity) => {
             totalSaved += activity.saved_money;
-            yearlySaved += totalSaved;
         });
 
         if(totalSaved != 0){
+
+            yearlySaved += totalSaved;
 
             const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
@@ -85,6 +84,31 @@ async function fetchMonth(){
 
 
     }
+
+    getNewPremium();
+
+}
+
+
+async function getNewPremium(){
+
+    const totalSavings = document.getElementById('total-savings');
+
+    const {data,error} = await supa
+    .from('profiles')
+    .select('*')
+    .eq('id', initialUser.id)
+    .single();
+
+    if(error){
+        console.log(error.message);
+    }
+
+    console.log(data);
+
+    let result = parseFloat(data.base_premium - yearlySaved).toFixed(2);
+
+    totalSavings.innerHTML = `Du zahlst diesen Monat ${result}CHF KK-Prämie.`
 
 }
 
