@@ -98,6 +98,10 @@ header {
   margin-top: 4%;
 }
 
+.button:hover {
+  background: #AAAAAA;
+}
+
 .inputfeld {
   width: 100%; /* Breite auf 100% setzen, um den Container zu füllen */
   padding: 10px; /* Innenabstand hinzufügen */
