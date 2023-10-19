@@ -148,6 +148,10 @@ input[type="number"] {
   margin-top: 15px;
 }
 
+.calculate-container:hover {
+  background: #AAAAAA;
+}
+
 /* Stil für den Button "button_weit" */
 .feld_weit {
     grid-column: span 2; /* Spannen Sie über beide Spalten */

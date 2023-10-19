@@ -1,4 +1,4 @@
-import { supa } from "/scripts/supabase.js"
+import { supa } from "../scripts/supabase.js"
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {
     logout();
@@ -11,6 +11,6 @@ async function logout() {
     } else {
         console.log("User logged out successfully.");
         // Redirect to login page after successful logout
-        window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
+        window.location.href = '../index.html';
     }
 }
