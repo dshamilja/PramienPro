@@ -226,7 +226,6 @@ footer button {
 
   /* Text unten links*/
 .bottom-content {
-  position: fixed;
   bottom: 0;
   left: 0;
   padding: 10px;
