@@ -54,10 +54,10 @@ header {
 
 /* Stil für die Titelzeile */
 .title {
-    line-height: 60px;
     word-wrap: break-word;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     grid-column: span 2;
     font-family: Bodoni Moda;
     font-weight: 700;
@@ -130,24 +130,22 @@ input[type="number"] {
 }
 
 .calculate-container {
-    width: 200px;
-    padding: 10px;
-    background: #EEB4FF;
-    border-radius: 8px;
-    justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
-    align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
-    grid-column: span 2; /* Spannen Sie über beide Spalten */
-    margin-top: 25px;
-}
-
-.calculate-content {
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    font-family: Comfortaa;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
+  width: 200px;
+  padding: 10px;
+  background: #EEB4FF;
+  border-radius: 8px;
+  justify-self: center; /* Horizontale Zentrierung innerhalb der Spalte */
+  align-self: center; /* Vertikale Zentrierung innerhalb der Spalte */
+  grid-column: span 2; /* Spannen Sie über beide Spalten */
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: Comfortaa;
+  font-weight: 700;
+  line-height: 24px;
+  word-wrap: break-word;
+  border: none;
+  margin-top: 15px;
 }
 
 /* Stil für den Button "button_weit" */
@@ -189,16 +187,17 @@ footer {
   align-items: center; /* Zentriert den Text vertikal */
   margin: 0; /* Entferne den äußeren Margin des Footers */
   padding: 0; /* Entferne den äußeren Padding des Footers */
+  bottom: 0;
 }
 
 .footerdiv{
-    margin:0px auto;
+    margin-top: 2%;
     max-width:100%;
     padding: 20px;
     border-radius: 8px;
     display: grid;
     gap: 10px;
-    margin: 0 auto; /* In die Mitte des Bildschirms zentrieren */
+
 }
 
 footer ul {
@@ -234,7 +233,6 @@ footer button {
   margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
   padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
-
           /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
     /* Ändern Sie hier die Stile für Mobilgeräte */
@@ -294,7 +292,6 @@ footer button {
   }
 
   }
-
   @media (max-height: 1079px) {
     .container {
         grid-row: 1; /* Container oben auf dem Bildschirm positionieren */

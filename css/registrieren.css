@@ -53,16 +53,15 @@ header {
 
 /* Stil für die Titelzeile */
 .title {
-  line-height: 60px;
   word-wrap: break-word;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   grid-column: span 2;
   font-family: Bodoni Moda;
-    font-weight: 700;
-    font-size: 55px;
+  font-weight: 700;
+  font-size: 55px;
 }
-
 
 /* Stil für die Buttons */
 .button-container {
@@ -118,6 +117,7 @@ header {
   line-height: 24px;
   word-wrap: break-word;
   border: none;
+  margin-top: 15px;
 }
 
 /* Stil für den Button "button_weit" */
@@ -152,70 +152,83 @@ header {
 }
 
 
-footer {
-   bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
-   width: 100%;
-   padding: 10px;
-   text-align: center;
-   height: 20px;
- }
- 
- .footer-content {
-   display: flex;
-   align-items: center; /* Vertikal zentrieren */
-   justify-content: center; /* Horizontal zentrieren */
-   font-family: 'Comfortaa', cursive;
-   font-size: 12px;
-   color: black;
-   text-decoration: none;
- }
- 
- .footer-links {
-   list-style: none;
-   display: flex;
-   margin: 0;
-   padding: 0;
-   text-decoration: none;
- }
- 
- .footer-links {
-   list-style: none;
-   display: flex;
-   margin: 0;
-   padding: 0;
- }
- 
- .footer-links li {
-   margin-right: 20px;
- }
- 
- .footer-links a {
-   color: black;
-   text-decoration: none;
-   padding: 5px 10px; /* Fügen Sie das Padding für den Logout-Button hinzu */
-   font-size: 12px;
-   cursor: pointer;
- }
- 
+ /* Stil für den Footer */
+ footer {
+  display: flex;
+  justify-content: center; /* Zentriert den Text horizontal */
+  align-items: center; /* Zentriert den Text vertikal */
+  margin: 0; /* Entferne den äußeren Margin des Footers */
+  padding: 0; /* Entferne den äußeren Padding des Footers */
+  bottom: 0;
+}
 
-/* CSS für Mobilgeräte */
+.footerdiv{
+    margin-top: 2%;
+    max-width:100%;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+  padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+}
+
+/* Stil für Links im Footer */
+footer a {
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
+}
+
+/* Stil für den Button im Footer */
+footer button {
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
+  padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
+}
+
+          /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
-  .container {
-    width: 70%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
-    padding: 10px; /* Verringern Sie den Container-Rand für Mobilgeräte */
-    height: auto; /* Automatische Höhe für Mobilgeräte */
-  }
+    /* Ändern Sie hier die Stile für Mobilgeräte */
+    /* Ändern Sie den grid-template-columns-Wert für die Mobileversion */
+    .container {
+        width: auto; /* Die Breite automatisch anpassen */
+        margin: 0 10px; /* Einen Rand hinzufügen, um den Inhalt zu zentrieren */
+        grid-template-columns: 1fr 1fr; /* Zwei Spalten für Mobilgeräte */
+    }
+    input[type="date"],
+    input[type="number"] {
+        height: 60px; /* Ändern Sie die Höhe der Eingabefelder für Mobilgeräte */
+    }
+    
+    .button {
+        height: 30px !important; /* Ändern Sie die Höhe der Buttons für Mobilgeräte */
+    }
 
-  .title {
-    font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
-  }
+    .title {
+        font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
+      }
 
-  .container {
-    flex-direction: column; /* Ändern Sie die Ausrichtung der Buttons für Mobilgeräte auf vertikal */
-    align-items: center; /* Zentrieren Sie die Buttons vertikal für Mobilgeräte */
-  }
-
-  /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
+       /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
   .logo img {
     max-width: 150px;
     margin-right: 2px
@@ -226,7 +239,11 @@ footer {
     max-width: 15px;
   }
 
-.footer-links a {
+  .kleiner_text{
+    text-align: left; /* Links ausrichten */
+  }
+
+  .footer-links a {
     color: black;
     text-decoration: none;
     padding: 5px 5px; /* Fügen Sie das Padding für den Logout-Button hinzu */
@@ -234,4 +251,25 @@ footer {
     cursor: pointer;
   }
 
+  footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+  }
+
+  }
+  @media (max-height: 1079px) {
+    .container {
+        grid-row: 1; /* Container oben auf dem Bildschirm positionieren */
+    }
 }
+
+
+
