@@ -2,6 +2,8 @@ import { supa } from "../scripts/supabase.js";
 
 console.log("File Registrieren.js geladen");
 
+const initialUser = supa.auth.user();
+
 var inputField_first_name = document.getElementById("inputField_first_name");
 var inputField_last_name = document.getElementById("inputField_last_name");
 var inputField_mail_adress = document.getElementById("inputField_mail_adress");
@@ -10,7 +12,16 @@ var inputField_base_premium = document.getElementById("inputField_base_premium")
 var inputField_social_insurance_number = document.getElementById("inputField_social_insurance_number");
 var speichernButton = document.getElementById("speichernButton");
 
-speichernButton.addEventListener("click", function() {
+inputField_mail_adress.value = initialUser.email;
+
+speichernButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    registerUserData();
+});
+
+
+
+async function registerUserData() {
     var vorname = inputField_first_name.value;
     var nachname = inputField_last_name.value;
     var email = inputField_mail_adress.value;
@@ -24,7 +35,9 @@ speichernButton.addEventListener("click", function() {
         return;
     }
 
-    supa.from("profiles_duplicate").insert([
+    const { error } = await supa
+    .from("profiles")
+    .update([
         {
             first_name: vorname,
             last_name: nachname,
@@ -33,16 +46,18 @@ speichernButton.addEventListener("click", function() {
             base_premium: grundpramie,
             social_insurance_number: ahvNummer
         }
-    ]).then(response => {
-        console.log('Daten erfolgreich gespeichert:', response);
-        window.location.href = "/pages/jahresuebersicht.html";
-    }).catch(error => {
-        console.error('Fehler beim Speichern der Daten:', error);
-    });
+    ])
+    .eq('id', initialUser.id);
 
-});
+    if(error){
+        console.log("error: " + error.message + "\n hint: " + error.hint);
+        return;
+    }
 
+    console.log('Daten erfolgreich gespeichert:');
+    window.location.href = "/pages/jahresuebersicht.html";
 
+}
 
 
 
@@ -50,13 +65,15 @@ speichernButton.addEventListener("click", function() {
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {
     logout();
-    console.log("User logged out successfully.");
-    // Redirect to login page after erfolgreicher Abmeldung
-    window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
 });
 
-function logout() {
-    // Hier kannst du den Code für die Abmeldung implementieren, falls erforderlich
-    // Zum Beispiel: Code zum Löschen von Session-Daten, Authentifizierungstoken usw.
+async function logout() {
+    const { error } = await supa.auth.signOut();
+    if (error) {
+        console.error("Error during logout:", error);
+    } else {
+        console.log("User logged out successfully.");
+        // Redirect to login page after successful logout
+        window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
+    }
 }
-

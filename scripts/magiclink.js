@@ -40,9 +40,6 @@ document.getElementById('sendMagicLinkButton').addEventListener('click', (event)
 
 
 
-
-
-
 // Listener, für Änderungen des Auth Status
 // UserStatus wird aktualisiert, wenn sich der Auth Status ändert
 supa.auth.onAuthStateChange((event, session) => {
@@ -88,10 +85,10 @@ async function redirectToUrl(user){
     console.log(data);
 
     if(data.length == 0 || data == null) {
-        window.location.href = "../pages/benutzer.html";
+        window.location.href = "../pages/registrieren.html";
         return;
     } else if(data.social_insurance_number == null || data.social_insurance_number == ""){
-        window.location.href = "../pages/benutzer.html";
+        window.location.href = "../pages/registrieren.html";
         return;
     } else {
         window.location.href = "../pages/jahresuebersicht.html";
