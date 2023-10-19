@@ -182,10 +182,13 @@ input[type="number"] {
     color: #666666
   }
 
-  footer {
-    display: flex;
-    justify-content: center; /* Zentriert den Text horizontal */
-    align-items: center; /* Zentriert den Text vertikal */
+ /* Stil für den Footer */
+footer {
+  display: flex;
+  justify-content: center; /* Zentriert den Text horizontal */
+  align-items: center; /* Zentriert den Text vertikal */
+  margin: 0; /* Entferne den äußeren Margin des Footers */
+  padding: 0; /* Entferne den äußeren Padding des Footers */
 }
 
 .footerdiv{
@@ -200,15 +203,15 @@ input[type="number"] {
 
 footer ul {
   display: flex;
-  gap: 43px;
-  justify-content: space-between; /* Gleichmäßiger Abstand zwischen den Elementen */
-  margin: 0 auto; /* Horizontal zentrieren */
-  align-items: center; /* Vertikal zentrieren */
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
   font-family: 'Comfortaa', cursive;
   font-size: 12px;
   color: black;
   text-decoration: none;
   list-style: none;
+  padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
 }
 
 /* Stil für Links im Footer */
@@ -219,15 +222,17 @@ footer a {
 
 /* Stil für den Button im Footer */
 footer button {
-  text-decoration: none; /* Entfernt die Unterstreichung */
-  color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
-  background: transparent; /* Entfernt den Hintergrund */
-  border: none; /* Entfernt die Rahmen */
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  border: none;
   cursor: pointer;
   font-family: 'Comfortaa', cursive;
   font-size: 12px;
-  height: 12px; /* Passen Sie die Höhe nach Bedarf an */
-  line-height: 12px; /* Passen Sie die Zeilenhöhe an die Höhe an */
+  height: 12px;
+  line-height: 12px;
+  margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
+  padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
 
           /* CSS für Mobilgeräte */
@@ -274,7 +279,20 @@ footer button {
     font-size: 12px;
     cursor: pointer;
   }
-  
+
+  footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+  }
+
   }
 
   @media (max-height: 1079px) {
