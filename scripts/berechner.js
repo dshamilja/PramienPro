@@ -1,8 +1,9 @@
 import { supa } from "../scripts/supabase.js"
 
-
 console.log("File berechner.js geladen");
 
+
+//Eingabe der Inputfelder durch click auf Berechnen-Button in die Supabasetabelle speichern
 const initialUser = supa.auth.user();
 
 var datePicker = document.getElementById("date-picker");
@@ -55,12 +56,9 @@ async function registerActivity() {
         console.error("Fehler beim Speichern der Daten:", error);
     } else {
         console.log("Daten erfolgreich gespeichert:", data);
-        window.location.href = "/pages/jahresuebersicht.html";
+        window.location.href = "/pages/berechnung.html";
     }
 }
-
-
-
 
 
 
