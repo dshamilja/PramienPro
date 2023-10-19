@@ -128,6 +128,7 @@ p {
     height: 50px;
     background: #AAAAAA;
     border-radius: 8px;
+    border: none;
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
