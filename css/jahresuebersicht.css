@@ -124,15 +124,6 @@ p {
     margin-bottom: 20px;
 }
 
-.month-icon {
-  background-image: url('../links/kreuz.png');
-  width: 40px;
-  height: 40px;
-  margin-left: auto; /* Verschiebt das Bild ganz nach rechts */
-  background-repeat: no-repeat;
-  margin-right: 1%;
-}
-
 .month-item {
     height: 50px;
     background: #AAAAAA;
@@ -149,6 +140,15 @@ p {
     line-height: 24px;
     word-wrap: break-word;
     padding-left: 20px; /* Abstand vom linken Rand */
+}
+.month-icon {
+  width: 20px;
+  height: 20px;
+  float: right; /* Float the element to the right */
+  background-image: url('../links/kreuz.png'); /* Replace 'kreuz.png' with the correct path to your image */
+  background-size: 100% 100%; /* Make sure the background image covers the entire element */
+  margin-left: auto; /* Add some left margin for spacing */
+  margin-right: 1%;
 }
 
  /* Stil für den Footer */
