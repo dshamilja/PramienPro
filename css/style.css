@@ -213,10 +213,6 @@ footer button {
     font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
   }
 
-  .button {
-    width: 80%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
-  }
-
   /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
   .logo img {
     max-width: 150px;
@@ -228,6 +224,7 @@ footer button {
     max-width: 15px;
   }
 
+ 
   .footer-links a {
     color: black;
     text-decoration: none;
@@ -235,6 +232,20 @@ footer button {
     font-size: 12px;
     cursor: pointer;
   }
+
+  footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+  }
+
 
   /* Text unten links*/
 .bottom-content {

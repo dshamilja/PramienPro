@@ -98,8 +98,13 @@ input[type="number"] {
     width: 16px;
     height: 16px;
     margin-right: 5px;
+    accent-color: #EEB4FF;
+
 }
 
+.radio-container ::after{
+  background-color: #EEB4FF;
+}
 /* Stil für die Buttons */
 .feld-container {
     display: flex;
@@ -226,7 +231,6 @@ footer button {
   margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
   padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
-   
    
         /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
