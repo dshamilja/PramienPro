@@ -46,7 +46,7 @@ document.getElementById('sendMagicLinkButton').addEventListener('click', (event)
 // Listener, für Änderungen des Auth Status
 // UserStatus wird aktualisiert, wenn sich der Auth Status ändert
 supa.auth.onAuthStateChange((event, session) => {
-  if (event === "SIGNED_IN") {
+  if (event === "SIGNED_IN") { 
       console.log("User signed in: ", session.user);
 
       updateUserStatus(session.user);
