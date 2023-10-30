@@ -173,51 +173,58 @@ p {
     padding-left: 20px; /* Abstand vom linken Rand */
 }
 
+/* Stil für den Footer */
 footer {
-    position: fixed; /* Ändere die Position auf 'fixed' */
-     bottom: 10px; /* Setze den Abstand zum unteren Rand auf 10px (oder einen anderen Wert nach Bedarf) */
-     width: 100%;
-     padding: 10px;
-     text-align: center;
-     height: 20px;
-   }
-   
-   .footer-content {
-     display: flex;
-     align-items: center; /* Vertikal zentrieren */
-     justify-content: center; /* Horizontal zentrieren */
-     font-family: 'Comfortaa', cursive;
-     font-size: 12px;
-     color: black;
-     text-decoration: none;
-   }
-   
-   .footer-links {
-     list-style: none;
-     display: flex;
-     margin: 0;
-     padding: 0;
-     text-decoration: none;
-   }
-   
-   .footer-links {
-     list-style: none;
-     display: flex;
-     margin: 0;
-     padding: 0;
-   }
-   
-   .footer-links li {
-     margin-right: 20px;
-   }
-   
-   .footer-links a {
-     color: black;
-     text-decoration: none;
-     padding: 5px 10px; /* Fügen Sie das Padding für den Logout-Button hinzu */
-     font-size: 12px;
-     cursor: pointer;
-   }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* Ensure the footer is on top of other content */
+}
+
+.footerdiv{
+    margin-top: 2%;
+    max-width:100%;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+  list-style: none;
+  padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+}
+
+/* Stil für Links im Footer */
+footer a {
+  text-decoration: none; /* Entfernt die Unterstreichung */
+  color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
+}
+
+/* Stil für den Button im Footer */
+footer button {
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Comfortaa', cursive;
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
+  padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
+}
 
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {

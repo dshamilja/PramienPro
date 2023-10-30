@@ -184,14 +184,14 @@ input[type="number"] {
     color: #666666
   }
 
- /* Stil für den Footer */
+/* Stil für den Footer */
 footer {
-  display: flex;
-  justify-content: center; /* Zentriert den Text horizontal */
-  align-items: center; /* Zentriert den Text vertikal */
-  margin: 0; /* Entferne den äußeren Margin des Footers */
-  padding: 0; /* Entferne den äußeren Padding des Footers */
+  position: fixed;
   bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* Ensure the footer is on top of other content */
 }
 
 .footerdiv{

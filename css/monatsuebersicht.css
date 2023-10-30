@@ -114,13 +114,12 @@ p {
 
 /* Stil für den Footer */
 footer {
-  position: fixed; /* Fixed position to keep it at the bottom of the viewport */
+  position: fixed;
   bottom: 0;
   width: 100%;
-  left: 0;
-  right: 0;
   display: flex;
-  justify-content: center; /* Center the content horizontally within the footer */
+  justify-content: center;
+  z-index: 1; /* Ensure the footer is on top of other content */
 }
 
 .footerdiv{

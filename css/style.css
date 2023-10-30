@@ -122,7 +122,7 @@ header {
   color: black;
 }
 
-/* Füge dieses CSS am Ende deiner vorhandenen CSS-Regeln hinzu */
+/* Updated CSS to ensure bottom-content fits without changing the look */
 .bottom-content {
   bottom: 0;
   left: 0;
@@ -132,8 +132,14 @@ header {
   font-size: 20px;
   font-weight: 400;
   margin-left: 2%;
-  margin-top: 5%;
+  margin-top: 2%;
+  max-height: calc(100vh - 150px); /* Adjust the maximum height based on the header's height */
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 
 .bottom-content h2 {
   margin: 0;
@@ -144,24 +150,23 @@ header {
   margin: 5px 0;
 }
 
- /* Stil für den Footer */
- footer {
-  display: flex;
-  justify-content: center; /* Zentriert den Text horizontal */
-  align-items: center; /* Zentriert den Text vertikal */
-  margin: 0; /* Entferne den äußeren Margin des Footers */
-  padding: 0; /* Entferne den äußeren Padding des Footers */
+/* Stil für den Footer */
+footer {
+  position: fixed;
   bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* Ensure the footer is on top of other content */
 }
 
 .footerdiv{
-    margin-top: 1%;
+    margin-top: 2%;
     max-width:100%;
     padding: 20px;
     border-radius: 8px;
     display: grid;
     gap: 10px;
-
 }
 
 footer ul {
@@ -197,6 +202,7 @@ footer button {
   margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
   padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
+
 
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
@@ -248,19 +254,18 @@ footer button {
   }
 
 
-  /* Text unten links*/
+/* Add margin-bottom to .bottom-content */
 .bottom-content {
-  bottom: 0;
-  left: 0;
   padding: 10px;
   border-top-right-radius: 8px;
   font-family: 'Comfortaa', cursive;
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 18%;
   margin-left: 2%;
-  margin-top: 50px;
+  margin-top: 5%;
+  margin-bottom: 10px; /* Adjust this value to create space for the footer */
 }
+
 .divfeld{
   width: 85%;
 }
@@ -268,5 +273,5 @@ footer button {
 p{
   font-size: 15px;
 }
-}
 
+}
