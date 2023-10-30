@@ -39,6 +39,7 @@ header {
   margin-left: 40px; /* Margin für die Pfeiltaste angepasst */
   max-width: 20px; /* Maximale Breite des Pfeils */
   height: auto; /* Damit der Pfeil proportional skaliert wird */
+  visibility: hidden;
 }
 
 .centered-content {

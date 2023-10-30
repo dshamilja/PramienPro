@@ -92,6 +92,7 @@ p {
     padding-left: 20px; /* Abstand vom linken Rand */
 }
 
+
 .month-button {
   width: 20px;
   height: 20px;
@@ -111,14 +112,15 @@ p {
   transform: scale(1.2);
 }
 
- /* Stil für den Footer */
- footer {
-  display: flex;
-  justify-content: center; /* Zentriert den Text horizontal */
-  align-items: center; /* Zentriert den Text vertikal */
-  margin: 0; /* Entferne den äußeren Margin des Footers */
-  padding: 0; /* Entferne den äußeren Padding des Footers */
+/* Stil für den Footer */
+footer {
+  position: fixed; /* Fixed position to keep it at the bottom of the viewport */
   bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; /* Center the content horizontally within the footer */
 }
 
 .footerdiv{

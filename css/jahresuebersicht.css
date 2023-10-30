@@ -23,6 +23,10 @@ header {
   align-items: center; /* Um die Elemente vertikal zu zentrieren */
 }
 
+.arrow{
+  visibility: hidden;
+}
+
 /*Header*/
 .logo img {
   max-width: 200px; /* Maximale Breite des Logos */
@@ -141,6 +145,10 @@ p {
     line-height: 24px;
     word-wrap: break-word;
     padding-left: 20px; /* Abstand vom linken Rand */
+}
+
+.month-item:hover{
+  background: #666666;;
 }
 
  /* Stil für den Footer */
