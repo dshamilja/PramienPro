@@ -165,6 +165,13 @@ footer button {
   padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
 
+
+/* Style for the footer links when they are clicked */
+footer a:hover {
+  font-weight: 800; /* Increase font weight to make it bolder */
+}
+
+
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
 .title-overview  {

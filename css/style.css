@@ -188,6 +188,11 @@ footer a {
   color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
 }
 
+/* Style for the footer links when they are clicked */
+footer a:hover {
+  font-weight: 800; /* Increase font weight to make it bolder */
+}
+
 /* Stil für den Button im Footer */
 footer button {
   text-decoration: none;

@@ -184,8 +184,8 @@ input[type="number"] {
     color: #666666
   }
 
-/* Stil für den Footer */
-footer {
+ /* Stil für den Footer */
+ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -201,6 +201,7 @@ footer {
     border-radius: 8px;
     display: grid;
     gap: 10px;
+
 }
 
 footer ul {
@@ -236,6 +237,14 @@ footer button {
   margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
   padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
+
+
+/* Style for the footer links when they are clicked */
+footer a:hover {
+  font-weight: 800; /* Increase font weight to make it bolder */
+}
+
+
           /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
     /* Ändern Sie hier die Stile für Mobilgeräte */
