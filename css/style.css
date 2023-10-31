@@ -235,7 +235,6 @@ footer button {
     margin-left: 20px;
     max-width: 15px;
   }
-
  
   .footer-links a {
     color: black;
@@ -267,8 +266,7 @@ footer button {
   font-size: 20px;
   font-weight: 400;
   margin-left: 2%;
-  margin-top: 5%;
-  margin-bottom: 10px; /* Adjust this value to create space for the footer */
+  margin-top: 20%;
 }
 
 .divfeld{
@@ -278,5 +276,4 @@ footer button {
 p{
   font-size: 15px;
 }
-
 }
