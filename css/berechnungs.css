@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100%;
     z-index: 0;
+    min-height: 100vh; 
     background-image: url(/links/hintergrund.jpeg);
     background-repeat: no-repeat;
     font-family: 'Comfortaa', cursive;
@@ -176,14 +177,14 @@ p {
     padding-left: 20px; /* Abstand vom linken Rand */
 }
 
-/* Stil für den Footer */
 footer {
-  position: fixed;
-  bottom: 0;
+  position: fixed; /* Use fixed positioning for the footer */
+  bottom: 0; /* Stick the footer to the bottom of the viewport */
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 1; /* Ensure the footer is on top of other content */
+  z-index: 1;
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .footerdiv{
@@ -235,6 +236,10 @@ footer a:hover {
   font-weight: 800; /* Increase font weight to make it bolder */
 }
 
+/* Style for the footer links when they are clicked */
+#logoutButton:hover {
+  font-weight: 800; /* Increase font weight to make it bolder */
+}
 
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
