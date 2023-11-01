@@ -106,9 +106,9 @@ async function getNewPremium(){
 
     console.log(data);
 
-    let result = parseFloat(data.base_premium - yearlySaved).toFixed(2);
+    let result = parseFloat(yearlySaved).toFixed(2);
 
-    totalSavings.innerHTML = `Du zahlst diesen Monat ${result}CHF KK-Prämie.`
+    totalSavings.innerHTML = `Du sparst dieses Jahr ${result} CHF KK-Prämie.`
 
 }
 

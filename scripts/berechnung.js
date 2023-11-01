@@ -7,7 +7,7 @@ document.getElementById('logoutButton').addEventListener('click', function() {
 const moneyMessage = document.getElementById('message');
 const savedMoney = localStorage.getItem("saved_money");
 
-moneyMessage.innerHTML = "Du hast CHF " + savedMoney + " gespart!";
+moneyMessage.innerHTML = "Du hast " + savedMoney + " CHF gespart!";
 
 async function logout() {
     const { error } = await supa.auth.signOut();

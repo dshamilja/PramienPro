@@ -22,6 +22,25 @@ const thisYear = new Date().getFullYear();
 
 fetchMonthData();
 
+async function getNewPremium(yearlySaved){
+    const totalSavings = document.getElementById('total-savings-month');
+    const {data, error} = await supa
+    .from('profiles')
+    .select('*')
+    .eq('id', initialUser.id)
+    .single();
+
+    if(error){
+        console.log(error.message);
+    }
+
+    let result = parseFloat(data.base_premium - yearlySaved).toFixed(2);
+    console.log(result)
+    totalSavings.innerHTML = `Du zahlst diesen Monat ${result} CHF KK-Prämie.`
+
+
+}
+
 
 
 async function fetchMonthData(){
@@ -63,9 +82,11 @@ async function fetchMonthData(){
 
         console.log(data);
 
-
+        // Funktion um Sparbetrag anzuzeigen
+        
+        let totalMoney = 0;
         for (const activity of data) {
-
+            
             // let index = (data.indexOf(activity))-1;
 
             const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -82,16 +103,16 @@ async function fetchMonthData(){
             const duration = activity.duration;
 
             const moneySaved = activity.saved_money.toFixed(2);
+            totalMoney += activity.saved_money;
 
             monthContainer.innerHTML += `
             <div class="month-item">${activityDate}, ${activityType}, ${duration} min, CHF ${moneySaved}
             <div class="month-button" data-activity-id="${activity.id}"></div>
             </div>
                 
-        `;
-
-
-        }
+        `;}
+        getNewPremium(totalMoney)
+        
 
         const deleteButtons = document.querySelectorAll('.month-button');
         deleteButtons.forEach(button =>{

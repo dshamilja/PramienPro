@@ -154,8 +154,8 @@ p {
 
 
 footer {
-  position: fixed; /* Use fixed positioning for the footer */
-  bottom: 0; /* Stick the footer to the bottom of the viewport */
+  position: fixed; /* Use fixed positioning for the footer */ /* Stick the footer to the bottom of the viewport */
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
