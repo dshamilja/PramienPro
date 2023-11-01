@@ -5,7 +5,6 @@ document.getElementById('logoutButton').addEventListener('click', function() {
 });
 
 
-
 const initialUser = supa.auth.user();
 
 const monthContainer = document.querySelector('.container-month');
@@ -78,15 +77,11 @@ async function fetchMonth(){
 
 
             monthContainer.appendChild(monthItem);
-
         }
-
-
 
     }
 
     getNewPremium();
-
 }
 
 

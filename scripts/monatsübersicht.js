@@ -2,7 +2,6 @@ import { supa } from "../scripts/supabase.js"
 
 const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
-
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const month = urlParams.get('month');
@@ -37,10 +36,7 @@ async function getNewPremium(yearlySaved){
     let result = parseFloat(data.base_premium - yearlySaved).toFixed(2);
     console.log(result)
     totalSavings.innerHTML = `Du zahlst diesen Monat ${result} CHF KK-Prämie.`
-
-
 }
-
 
 
 async function fetchMonthData(){
@@ -83,7 +79,6 @@ async function fetchMonthData(){
         console.log(data);
 
         // Funktion um Sparbetrag anzuzeigen
-        
         let totalMoney = 0;
         for (const activity of data) {
             
@@ -123,7 +118,6 @@ async function fetchMonthData(){
 
     }
 
-
     async function deleteActivity(activity_id) {
 
         const { error } = await supa
@@ -137,22 +131,20 @@ async function fetchMonthData(){
         }
 
         fetchMonthData();
-
     }
-
-
-
-
 
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {
     logout();
-    console.log("User logged out successfully.");
-    // Redirect to login page after erfolgreicher Abmeldung
-    window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
 });
 
-function logout() {
-    // Hier kannst du den Code für die Abmeldung implementieren, falls erforderlich
-    // Zum Beispiel: Code zum Löschen von Session-Daten, Authentifizierungstoken usw.
+async function logout() {
+    const { error } = await supa.auth.signOut();
+    if (error) {
+        console.error("Error during logout:", error);
+    } else {
+        console.log("User logged out successfully.");
+        // Redirect to login page after successful logout
+        window.location.href = '../index.html'; // Ändern Sie 'login.html' entsprechend Ihrer Login-Seite
+    }
 }

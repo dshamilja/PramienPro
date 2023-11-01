@@ -19,8 +19,6 @@ speichernButton.addEventListener("click", (event) => {
     registerUserData();
 });
 
-
-
 async function registerUserData() {
     var vorname = inputField_first_name.value;
     var nachname = inputField_last_name.value;
@@ -56,11 +54,7 @@ async function registerUserData() {
 
     console.log('Daten erfolgreich gespeichert:');
     window.location.href = "/pages/jahresuebersicht.html";
-
 }
-
-
-
 
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {

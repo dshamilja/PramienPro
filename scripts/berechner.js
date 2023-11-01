@@ -65,10 +65,6 @@ async function registerActivity() {
     }
 }
 
-
-
-
-
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {
     logout();

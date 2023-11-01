@@ -18,20 +18,11 @@ supa.from('profiles')
      console.log("failed")
  })
 
-//document.getElementById('inputField_mail_address').value = initialUser.email;
-//document.getElementById("inputField_first_name").value = initialUser.first_name;
-
 const saveButton = document.getElementById('save-btn');
 
 saveButton.addEventListener('click', function () {
     updateUser(initialUser)
 });
-
-console.log("File Registrieren.js geladen");
- //hier müsste schlussendlich die id des aktuell eingeloggten users abgerufen werden!!!
- 
-
- 
 
 
 async function updateUser(user) {
@@ -66,10 +57,7 @@ async function updateUser(user) {
     if(data){
         window.location.href = "./jahresuebersicht.html";
     }
-
 }
-
-
 
 // Logout über Logoutbutton im Footer
 document.getElementById('logoutButton').addEventListener('click', function() {

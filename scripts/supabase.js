@@ -10,4 +10,3 @@ const supa = supabase.createClient(supabaseUrl, supabaseKey, {
 });
 
 export { supa }
-//bis hier ist es rein der code um auf die supabasedatenbank zuzugreifen
