@@ -1,21 +1,19 @@
 body {
   margin: 0;
-  /*display: flex;
-  flex-direction: column;*/
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   z-index: 0;
-  min-height: 100vh; 
-  background: #F4F4F4; 
+  min-height: 100vh;
+  width: 100vw;
   background-image: url(/links/hintergrund.jpeg);
   background-repeat: no-repeat;
-  font-size: 20px;
   font-family: 'Comfortaa', cursive;
-  
+  font-size: 20px;
 }
 
-/*Header*/
 header {
   top: 0; /* Position oben auf dem Bildschirm */
   left: 0;
@@ -25,7 +23,13 @@ header {
   display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
   justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
   align-items: center; /* Um die Elemente vertikal zu zentrieren */
-}
+  width: 100%;
+  }
+  
+  main {
+  width: 100%;
+  min-height: 70vh;
+  }
 
 /*Header*/
 .logo img {
@@ -147,18 +151,18 @@ header {
 .bottom-content p {
   margin: 5px 0;
 }
-
 footer {
   position: relative; /* Use relative positioning for the footer */
   width: 100%;
   display: flex;
   justify-content: center;
   z-index: 1;
+  padding: 10px; /* Add padding to create space for the footer */
   box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .footerdiv{
-    margin-top: 2%;
+  
     max-width:100%;
     padding: 20px;
     border-radius: 8px;
@@ -185,11 +189,6 @@ footer a {
   color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
 }
 
-/* Style for the footer links when they are clicked */
-footer a:hover {
-  font-weight: 800; /* Increase font weight to make it bolder */
-}
-
 /* Stil für den Button im Footer */
 footer button {
   text-decoration: none;
@@ -205,8 +204,10 @@ footer button {
   padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
 
-#logoutButton {
-  text-align: center;
+
+/* Style for the footer links when they are clicked */
+footer a:hover {
+  font-weight: 800; /* Increase font weight to make it bolder */
 }
 
 /* Style for the footer links when they are clicked */
@@ -217,6 +218,15 @@ footer button {
 
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
+
+  header {
+    width: 90vw;
+  }
+  
+  main {
+    width: 90vw;
+  
+  }
   .inputfeld {
     width: 100%; /* Container soll die gesamte Bildschirmbreite für Mobilgeräte einnehmen */
     padding: 10px; /* Verringern Sie den Container-Rand für Mobilgeräte */

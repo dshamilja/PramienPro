@@ -1,234 +1,249 @@
 body {
-    margin: 0;
-    /*display: flex;
-    flex-direction: column;*/
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    z-index: 0;
-    min-height: 100vh; 
-    background-color:#F4F4F4;
-    font-family: 'Comfortaa', cursive;
-    font-size: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color:#F4F4F4;
+  font-family: 'Comfortaa', cursive;
+  font-size: 20px;
 }
 
-/*Header*/
+
 header {
-  top: 0; /* Position oben auf dem Bildschirm */
-  left: 0;
-  right: 0;
-  padding: 10px; /* Innenabstand des Headers */
-  height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
-  display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
-  justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
-  align-items: center; /* Um die Elemente vertikal zu zentrieren */
+top: 0; /* Position oben auf dem Bildschirm */
+left: 0;
+right: 0;
+padding: 10px; /* Innenabstand des Headers */
+height: 150px; /* Ändere die Höhe des Headers nach Bedarf */
+display: flex; /* Um die Logo- und Pfeilbereiche nebeneinander anzuordnen */
+justify-content: space-between; /* Um Platz zwischen dem Logo und dem Pfeil zu schaffen */
+align-items: center; /* Um die Elemente vertikal zu zentrieren */
+width: 100%;
 }
 
-/*Header*/
+main {
+width: 100%;
+min-height: 70vh;
+}
+
+
 .logo img {
-  max-width: 200px; /* Maximale Breite des Logos */
-  height: auto; /* Damit das Logo proportional skaliert wird */
-  margin-right: 40px; /* Margin für das Logo angepasst */
-  margin-top: 20px;
+max-width: 200px; /* Maximale Breite des Logos */
+height: auto; /* Damit das Logo proportional skaliert wird */
+margin-right: 40px; /* Margin für das Logo angepasst */
+margin-top: 20px;
 }
 
-/*Header*/
+
 .arrow img {
-  margin-left: 40px; /* Margin für die Pfeiltaste angepasst */
-  max-width: 20px; /* Maximale Breite des Pfeils */
-  height: auto; /* Damit der Pfeil proportional skaliert wird */
+margin-left: 40px; /* Margin für die Pfeiltaste angepasst */
+max-width: 20px; /* Maximale Breite des Pfeils */
+height: auto; /* Damit der Pfeil proportional skaliert wird */
 }
 
 
 .button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Erstelle 2 gleichmäßige Spalten */
-    gap: 100px;
-    justify-content: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    height: 50px;
-    margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Erstelle 2 gleichmäßige Spalten */
+  gap: 100px;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: 50px;
+  margin-top: 50px;
 }
 
 p {
-    text-align: center;
-    font-size: 18px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .title-overview {
-    text-align: center;
-    font-family: Bodoni Moda;
-    font-weight: 700;
-    font-size: 55px;
+  text-align: center;
+  font-family: Bodoni Moda;
+  font-weight: 700;
+  font-size: 55px;
 }
 
 .container-month {
-    display: grid;
-    grid-template-columns: 1fr; /* Nur eine Spalte pro Zeile */
-    gap: 13px;
-    justify-content: center;
-    align-content: center; /* Zentrieren sowohl horizontal als auch vertikal */
-    width: 80%;
-    margin: 0 auto; /* Zur horizontalen Zentrierung des Containers */
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr; /* Nur eine Spalte pro Zeile */
+  gap: 13px;
+  justify-content: center;
+  align-content: center; /* Zentrieren sowohl horizontal als auch vertikal */
+  width: 80%;
+  margin: 0 auto; /* Zur horizontalen Zentrierung des Containers */
+  margin-bottom: 20px;
 }
 
 .month-item {
-    height: 50px;
-    background: #666666;
-    border-radius: 8px;
-    border: 1px white solid;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    display: inline-flex;
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    font-family: Comfortaa;
-    font-weight: 700;
-    line-height: 24px;
-    word-wrap: break-word;
-    padding-left: 20px; /* Abstand vom linken Rand */
+  height: 50px;
+  background: #666666;
+  border-radius: 8px;
+  border: 1px white solid;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: Comfortaa;
+  font-weight: 700;
+  line-height: 24px;
+  word-wrap: break-word;
+  padding-left: 20px; /* Abstand vom linken Rand */
 }
 
 
 .month-button {
-  width: 20px;
-  height: 20px;
-  margin-left: auto;
-  background: url('../links/kreuz.png') no-repeat center; /* Pfad zum Bild relativ zur CSS-Datei */
-  background-size: cover;
-  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-  margin-right: 1.5%;
-  display: inline-block; /* Make it a block-level element */
-  border: none; /* Remove button border */
-  padding: 0; /* Remove button padding */
-  transition: transform 0.2s; /* Add a smooth transition for scaling */
+width: 20px;
+height: 20px;
+margin-left: auto;
+background: url('../links/kreuz.png') no-repeat center; /* Pfad zum Bild relativ zur CSS-Datei */
+background-size: cover;
+cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+margin-right: 1.5%;
+display: inline-block; /* Make it a block-level element */
+border: none; /* Remove button border */
+padding: 0; /* Remove button padding */
+transition: transform 0.2s; /* Add a smooth transition for scaling */
 }
 
 /* Style the button when hovered */
 .month-button:hover {
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
 footer {
-  position: fixed; /* Use fixed positioning for the footer */
-  bottom: 0; /* Stick the footer to the bottom of the viewport */
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-  box-sizing: border-box; /* Include padding in the width calculation */
+/* position: fixed; Use fixed positioning for the footer */
+bottom: 0; /* Stick the footer to the bottom of the viewport */
+width: 100%;
+display: flex;
+justify-content: center;
+z-index: 1;
+box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .footerdiv{
-    margin-top: 2%;
-    max-width:100%;
-    padding: 20px;
-    border-radius: 8px;
-    display: grid;
-    gap: 10px;
+  max-width:100%;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
 }
 
 footer ul {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Comfortaa', cursive;
-  font-size: 12px;
-  color: black;
-  text-decoration: none;
-  list-style: none;
-  padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+display: flex;
+gap: 40px;
+justify-content: space-between;
+align-items: center;
+font-family: 'Comfortaa', cursive;
+font-size: 12px;
+color: black;
+text-decoration: none;
+list-style: none;
+padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
 }
 
 /* Stil für Links im Footer */
 footer a {
-  text-decoration: none; /* Entfernt die Unterstreichung */
-  color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
+text-decoration: none; /* Entfernt die Unterstreichung */
+color: black; /* Setzt die Textfarbe auf Schwarz oder die gewünschte Farbe */
 }
 
 /* Stil für den Button im Footer */
 footer button {
-  text-decoration: none;
-  color: black;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-family: 'Comfortaa', cursive;
-  font-size: 12px;
-  height: 12px;
-  line-height: 12px;
-  margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
-  padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
+text-decoration: none;
+color: black;
+background: transparent;
+border: none;
+cursor: pointer;
+font-family: 'Comfortaa', cursive;
+font-size: 12px;
+height: 12px;
+line-height: 12px;
+margin: 0; /* Füge diese Zeile hinzu, um den Margin des Buttons zu entfernen */
+padding: 0; /* Füge diese Zeile hinzu, um das Padding des Buttons zu entfernen */
 }
 
 
 /* Style for the footer links when they are clicked */
 footer a:hover {
-  font-weight: 800; /* Increase font weight to make it bolder */
+font-weight: 800; /* Increase font weight to make it bolder */
 }
 
 /* Style for the footer links when they are clicked */
 #logoutButton:hover {
-  font-weight: 800; /* Increase font weight to make it bolder */
+font-weight: 800; /* Increase font weight to make it bolder */
 }
 
 
 /* CSS für Mobilgeräte */
 @media (max-width: 767px) {
+
+header {
+  width: 90vw;
+}
+
+main {
+  width: 90vw;
+
+}
+
+
 .title-overview  {
-      font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
-    }
-  
-    /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
+    font-size: 35px; /* Passen Sie die Schriftgröße für Mobilgeräte an */
+  }
+
+  /* Ändern Sie die Größe der Logo- und Pfeilbilder für Mobilgeräte */
 .logo img {
-      max-width: 150px;
-      margin-right: 2px
-    }
-  
+    max-width: 150px;
+    margin-right: 2px
+  }
+
 .arrow img {
-      margin-left: 20px;
-      max-width: 15px;
-    }
+    margin-left: 20px;
+    max-width: 15px;
+  }
 
 .month-item {
-        font-size: 15px;
-        }
+      font-size: 15px;
+      }
 
 .month-icon {
-  width: 15px;
-  height: 15px;
-  margin-left: auto;
-  background-image: url('../links/kreuz.png'); /* Pfad zum Bild relativ zur CSS-Datei */
-  background-repeat: no-repeat;
-  margin-right: 3%;
+width: 15px;
+height: 15px;
+margin-left: auto;
+background-image: url('../links/kreuz.png'); /* Pfad zum Bild relativ zur CSS-Datei */
+background-repeat: no-repeat;
+margin-right: 3%;
 }
-    
+  
 .footer-links a {
-          color: black;
-          text-decoration: none;
-          padding: 5px 5px; /* Fügen Sie das Padding für den Logout-Button hinzu */
-          font-size: 12px;
-          cursor: pointer;
-        }
-      
+        color: black;
+        text-decoration: none;
+        padding: 5px 5px; /* Fügen Sie das Padding für den Logout-Button hinzu */
+        font-size: 12px;
+        cursor: pointer;
+      }
+    
 footer ul {
-          display: flex;
-          gap: 20px;
-          justify-content: space-between;
-          align-items: center;
-          font-family: 'Comfortaa', cursive;
-          font-size: 12px;
-          color: black;
-          text-decoration: none;
-          list-style: none;
-          padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
-        }
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Comfortaa', cursive;
+        font-size: 12px;
+        color: black;
+        text-decoration: none;
+        list-style: none;
+        padding-left: 10px; /* Reduzieren Sie den linken Innenabstand auf 10px oder den gewünschten Wert */
+      }
 
-  }
-  
-  
+}
