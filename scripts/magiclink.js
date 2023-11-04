@@ -51,7 +51,6 @@ document.getElementById('sendMagicLinkButton').addEventListener('click', (event)
 });
 
 
-
 // Listener, für Änderungen des Auth Status
 // UserStatus wird aktualisiert, wenn sich der Auth Status ändert
 supa.auth.onAuthStateChange((event, session) => {
